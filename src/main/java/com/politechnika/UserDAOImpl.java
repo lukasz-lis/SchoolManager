@@ -1,15 +1,17 @@
 package com.politechnika;
 
 
-import com.politechnika.model.User;
-import com.politechnika.utlis.MongoDBDataStore;
+import java.util.List;
+
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.mongodb.morphia.Datastore;
 
-import javax.ejb.Singleton;
-import javax.ejb.Startup;
-import java.util.List;
+import com.politechnika.model.User;
+import com.politechnika.utlis.MongoDBDataStore;
 
 
 /**
@@ -32,19 +34,19 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public void addNewUser(User user) {
+	public void addNewUser(User user) {
         LOGGER.log(Level.INFO, "Dodaje nowego uzytkownika");
         ds.save(user);
     }
 
     @Override
-    public User findUserBy(String username) {
+	public User findUserBy(String username) {
         return ds.find(User.class, "username", username).get();
     }
 
 
     @Override
-    public List<User> getAllUsers() {
+	public List<User> getAllUsers() {
         LOGGER.debug("Pobieram");
         return ds.find(User.class).asList();
     }

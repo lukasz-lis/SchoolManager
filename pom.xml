@@ -8,13 +8,11 @@
     <name>SchoolManager Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
-
     <dependencies>
         <dependency>
-            <groupId>org.apache.openejb</groupId>
+            <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
-            <version>6.0-4</version>
-            <scope>provided</scope>
+            <version>7.0</version>
         </dependency>
 
         <dependency>
@@ -64,6 +62,13 @@
             <artifactId>junit</artifactId>
             <version>4.10</version>
         </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.0</version>
+            <scope>provided</scope>
+        </dependency>
+
 
 
     </dependencies>
@@ -100,8 +105,15 @@
             <name>Apache Snapshot Repository</name>
             <url>https://repository.apache.org/content/groups/snapshots/</url>
         </repository>
+        <repository>
+            <id>snapshot-repository.java.net</id>
+            <name>Java.net Snapshot Repository for Maven</name>
+            <url>https://maven.java.net/content/repositories/snapshots/</url>
+            <layout>default</layout>
+        </repository>
     </repositories>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
     </properties>
 </project>

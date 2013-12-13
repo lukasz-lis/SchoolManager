@@ -28,7 +28,7 @@ public class TestServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String destination = "login.jsp";
+        String destination = "/login.jsp";
         RequestDispatcher red = getServletContext().getRequestDispatcher(destination);
         red.forward(request, response);
     }

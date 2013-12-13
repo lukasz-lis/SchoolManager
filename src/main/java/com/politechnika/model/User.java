@@ -7,6 +7,8 @@ import org.mongodb.morphia.annotations.Id;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
+import javax.persistence.UniqueConstraint;
+import org.mongodb.morphia.annotations.Indexed;
 
 /**
  * Model class
@@ -19,11 +21,13 @@ import java.util.List;
 public abstract class User {
     @Id
     private ObjectId objectId;
+    @Indexed(unique = true)
     private String username;
     private String password;
     private String role;
     private String firstName;
     private String secName;
+    @Indexed(unique = true)
     private String email;
     private String salt;
     @Embedded

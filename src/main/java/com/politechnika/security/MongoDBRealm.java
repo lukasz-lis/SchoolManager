@@ -11,6 +11,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.mongodb.morphia.Datastore;
 
 import java.io.Serializable;
+import org.apache.shiro.util.SimpleByteSource;
 
 
 /**
@@ -46,18 +47,25 @@ public class MongoDBRealm extends AuthorizingRealm implements Serializable {
         UsernamePasswordToken upToken = (UsernamePasswordToken) authenticationToken;
 
         if (upToken.getUsername() == null) {
+            LOG.debug("Użytkownik pusty nie mam jak znaleść");
             throw new AuthenticationException("Username is null");
         }
+        LOG.debug("Haslo usera z formularza"+upToken.getPassword());
 
         return findPassowrdByUsername(upToken.getUsername());
     }
 
     private SimpleAuthenticationInfo findPassowrdByUsername(String username) {
+        
         User user = ds.find(User.class, "username", username).get();
         if(user == null) {
+            LOG.debug("Nie znalazłem użytkownika");
             throw new UnknownAccountException("Unknown user "+username);
         }
-        return new SimpleAuthenticationInfo(username, user.getPassword(), Sha256Hash.fromBase64String(user.getSalt()),getName());
+        LOG.debug("Hasło usera z bazy"+user.getPassword());
+        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(username, user.getPassword(), getName());
+        info.setCredentialsSalt(new SimpleByteSource(user.getSalt()));
+        return info;
     }
 
 
