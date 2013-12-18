@@ -1,8 +1,47 @@
-body {
-/*    background: #eee;*/
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.form-signin {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -100px;
+}
+header {
+    height: 100px;
+}
+.main-content {
+    margin-left: 250px;
+}
+.container {
+    width: 100%;
+}
+.sidebar {
+    width: 250px;
+    position: absolute;
+}
+footer {
+    height: 100px;
 }
 
-.form-signin {
-    max-width: 330px;
-    margin: 0 auto;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
