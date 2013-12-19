@@ -1,8 +1,9 @@
 <%@tag description="Overall Page template" pageEncoding="UTF-8" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@attribute name="header" fragment="true" %>
-<%@attribute name="footer" fragment="true" %>
+<%@attribute name="sidebartitle" fragment="true" %>
+<%@attribute name="sidebar" fragment="true" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <fmt:setBundle basename="message" />
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -62,21 +63,19 @@
 
         <section id="page">
             <div class="sidebar">
-                <div class="list-group">
-                    
-                    <a href="#" class="list-group-item active">
-                        Cras justo odio
-                    </a>
-                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                    <a href="#" class="list-group-item">Morbi leo risus</a>
-                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                    <a href="#" class="list-group-item">Vestibulum at eros</a>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>
+                            <jsp:invoke fragment="sidebartitle"/>
+                        </h4>
+                    </div>
+                    <ul class="list-group">
+                        <jsp:invoke fragment="sidebar"/>
+                    </ul>
                 </div>
             </div>
             <div class="main-content">
-                <div class="container">
-                    <jsp:doBody/>
-                </div>
+                <jsp:doBody/>
             </div>
         </section>
 

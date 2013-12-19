@@ -13,22 +13,29 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 
 /**
  *
  * @author l.lis
  */
-@WebServlet("/user")
+@WebServlet("/users")
 public class UserController extends HttpServlet {
     
-    private final static String PAGE = "/user.jsp";
+    private final static String PAGE = "/users/index.jsp";
+    private final static Logger LOGGER = Logger.getLogger(UserController.class);
     @EJB
     private UserDAO userDAO;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         MVCService mvc = new MVCService(PAGE, getServletContext());
-        req.setAttribute("users", userDAO.find().asList());
+    
+        LOGGER.debug("Sciezka"+req.getPathInfo());
+        HttpSession session = req.getSession();
+        session.setAttribute("users", userDAO.find().asList());
+        
         mvc.forward(req, resp);
         
     }    

@@ -27,6 +27,7 @@ public class MVCService {
 
     public void forward(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher rd = servletContext.getRequestDispatcher(pageToRedirect);
+        
         rd.forward(req, resp);
     }
 }
