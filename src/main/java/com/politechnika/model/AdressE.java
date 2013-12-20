@@ -1,8 +1,7 @@
 package com.politechnika.model;
 
-import org.bson.types.ObjectId;
+import javax.xml.bind.annotation.XmlRootElement;
 import org.mongodb.morphia.annotations.Embedded;
-import org.mongodb.morphia.annotations.Id;
 
 /**
  * Model class.
@@ -13,22 +12,22 @@ import org.mongodb.morphia.annotations.Id;
 
 @Embedded
 public class AdressE {
-
-    @Id
-    private ObjectId objectId;
+   
     private String streetName;
     private String streetNumber;
     private String localNumber;
     private String postCode;
 
-    public ObjectId getObjectId() {
-        return objectId;
+    public AdressE() {
     }
-
-    public void setObjectId(ObjectId objectId) {
-        this.objectId = objectId;
+    
+    public AdressE(String streetName, String streetNumber, String localNumber, String postCode) {
+        this.streetName = streetName;
+        this.streetNumber = streetNumber;
+        this.localNumber = localNumber;
+        this.postCode = postCode;
     }
-
+        
     public String getStreetName() {
         return streetName;
     }

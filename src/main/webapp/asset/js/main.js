@@ -21,3 +21,48 @@ $(function() {
     });
 
 });
+function userFormToJSON() {
+    return JSON.stringify({
+        adresses: [
+            {
+                localNumber: $("#local-number").val(),
+                postCode: $("#postcode").val(),
+                streetName: $("#street-name").val(),
+                streetNumber: $("#street-number").val()
+            }
+        ],
+        email: $("#email").val(),
+        firstName: $("#name").val(),
+        password: $("#password").val(),
+        phoneses: [
+            {
+                active:true,
+                phoneNumber: $("#phone").val()
+            }
+        ],
+        role:"",
+        salt:"",
+        secName: $("#secname").val(),
+        username: $("#username").val()
+    });
+}
+function addUser() {
+    console.log(userFormToJSON());
+    $.ajax({
+        type: 'POST',
+        contentType: "application/json",
+        url: "api/users",
+        dataType: "json",
+        data: userFormToJSON(),
+        success: function(data, textStatus, jqXHR) {
+            alert('User created successfully');
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert('addWine error: ' + textStatus);
+        }
+    });
+}
+$('#user-add-button').click(function(e) {
+    addUser();
+    return false;
+});

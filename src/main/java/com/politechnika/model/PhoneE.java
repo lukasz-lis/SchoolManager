@@ -1,8 +1,7 @@
 package com.politechnika.model;
 
-import org.bson.types.ObjectId;
+import javax.xml.bind.annotation.XmlRootElement;
 import org.mongodb.morphia.annotations.Embedded;
-import org.mongodb.morphia.annotations.Id;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,19 +12,18 @@ import org.mongodb.morphia.annotations.Id;
  */
 @Embedded
 public class PhoneE {
-    @Id
-    private ObjectId objectId;
+  
     private String phoneNumber;
     private Boolean active;
 
-    public ObjectId getObjectId() {
-        return objectId;
+    public PhoneE() {
     }
 
-    public void setObjectId(ObjectId objectId) {
-        this.objectId = objectId;
+    public PhoneE(String phoneNumber, Boolean active) {
+        this.phoneNumber = phoneNumber;
+        this.active = active;
     }
-
+    
     public String getPhoneNumber() {
         return phoneNumber;
     }

@@ -1,5 +1,6 @@
 package com.politechnika.model;
 
+import java.util.ArrayList;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Entity;
@@ -7,7 +8,6 @@ import org.mongodb.morphia.annotations.Id;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
-import javax.persistence.UniqueConstraint;
 import org.mongodb.morphia.annotations.Indexed;
 
 /**
@@ -16,8 +16,8 @@ import org.mongodb.morphia.annotations.Indexed;
  * Date: 18.11.13
  * Time: 22:39
  */
-@Entity("User")
 @XmlRootElement
+@Entity("User")
 public abstract class User {
     @Id
     private ObjectId objectId;
@@ -35,6 +35,22 @@ public abstract class User {
     @Embedded
     private List<PhoneE> phoneses;
 
+    public User() {
+    }
+
+    public User(ObjectId objectId, String username, String password, String role, String firstName, String secName, String email, String salt, List<AdressE> adresses, List<PhoneE> phoneses) {
+        this.objectId = objectId;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+        this.firstName = firstName;
+        this.secName = secName;
+        this.email = email;
+        this.salt = salt;
+        this.adresses = (adresses != null) ? new ArrayList<AdressE>(adresses) : null;           
+        this.phoneses = (phoneses != null) ? new ArrayList<PhoneE>(phoneses) : null;
+    }
+    
     public ObjectId getObjectId() {
         return objectId;
     }
