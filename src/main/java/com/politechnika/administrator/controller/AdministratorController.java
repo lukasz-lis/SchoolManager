@@ -18,7 +18,7 @@ import java.io.IOException;
  *
  * @author l.lis
  */
-@WebServlet("/adminitators")
+@WebServlet("/administrators")
 public class AdministratorController extends HttpServlet {
     
     private final static String PAGE = "/users/admin.jsp";

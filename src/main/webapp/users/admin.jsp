@@ -5,6 +5,14 @@
 <fmt:setBundle basename="message"/>
 
 <t:generic-main-page>
+    <jsp:attribute name="script">
+        <script>
+            $(document).ready(function() {               
+                refreshUserDT('api/administrators');                
+            });
+
+        </script>
+    </jsp:attribute>
     <jsp:body>
         <button data-toggle="modal" data-target="#add-admin-form" class="btn btn-primary"><fmt:message key="user.add.button.label.add.admin"/></button>
 
@@ -125,16 +133,16 @@
         <!-- /.modal -->
 
 
-        <table class="table table-striped">
+        <table id="list-user-table" class="table table-striped tablesorter">
             <thead>
-            <tr>
-                <th scope="col">Login</th>
-                <th scope="col">Imię</th>
-                <th scope="col">Nazwisko</th>
-                <th scope="col">Email</th>
-            </tr>
+                <tr>
+                    <th scope="col">Login</th>
+                    <th scope="col">Imię</th>
+                    <th scope="col">Nazwisko</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Email</th>
+                </tr>
             </thead>
         </table>
-
     </jsp:body>
 </t:generic-main-page>

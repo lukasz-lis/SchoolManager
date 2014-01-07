@@ -10,6 +10,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
+import org.bson.types.ObjectId;
 
 /**
  * Created by Łukasz on 31.12.13.
@@ -18,7 +19,6 @@ import java.util.List;
 public class AdministratorResource {
 
     private static final Logger LOGGER = Logger.getLogger(AdministratorResource.class);
-
     @EJB
     private AdministatorDAO administatorDAO;
 
@@ -30,10 +30,22 @@ public class AdministratorResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response create(Administrator administrator) {
+    public void create(Administrator administrator) {
         administrator = MongoDBRealm.createAdminAuthorization(administrator);
         administatorDAO.save(administrator);
         LOGGER.debug(administrator);
-        return Response.ok().build();
+    }
+    
+    @DELETE
+    @Path("{username}")
+    public void delete(@PathParam("username") String username) {
+        administatorDAO.delete(administatorDAO.findOne("username", username));
+    }
+
+    @GET
+    @Path("/count")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Long countAdmins() {
+        return administatorDAO.count();
     }
 }
