@@ -36,10 +36,11 @@ public class AdministratorResource {
         LOGGER.debug(administrator);
     }
     
-    @DELETE
+    @GET
     @Path("{username}")
-    public void delete(@PathParam("username") String username) {
-        administatorDAO.delete(administatorDAO.findOne("username", username));
+    @Produces(MediaType.APPLICATION_JSON)
+    public Administrator findByUsername(@PathParam("username") String username) {
+        return administatorDAO.findOne("username", username);
     }
 
     @GET

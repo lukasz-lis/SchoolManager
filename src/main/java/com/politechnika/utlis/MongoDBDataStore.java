@@ -20,7 +20,7 @@ public class MongoDBDataStore {
     private static Datastore ds;
     static {
         try {
-            ds = new Morphia().createDatastore(new Mongo(), "msm");
+            ds = new Morphia().createDatastore(new Mongo("192.168.1.105"), "msm");
 
         } catch (UnknownHostException e) {
             LOGGER.log(Level.ERROR, "Connection problem with database");

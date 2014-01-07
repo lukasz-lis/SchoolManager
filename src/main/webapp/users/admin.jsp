@@ -8,9 +8,14 @@
     <jsp:attribute name="script">
         <script>
             $(document).ready(function() {               
-                refreshUserDT('api/administrators');                
+                refreshUserDT('api/administrators');
+
             });
 
+            $(document).on('click', '#edit-button-form', function() {
+                $("#add-admin-form").modal();
+                editUserByModal();
+            });
         </script>
     </jsp:attribute>
     <jsp:body>
