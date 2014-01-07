@@ -13,22 +13,22 @@ import org.bson.types.ObjectId;
  * Date: 18.11.13
  * Time: 21:16
  */
-@Entity("User")
 @XmlRootElement
+@Entity("User")
 public class Student extends User{
 
     @Reference
-    private User carePerson;
+    private Care care;
     private Integer age;
 
-    public Student(User carePerson, Integer age) {
-        this.carePerson = carePerson;
+    public Student(Care care, Integer age) {
+        this.care = care;
         this.age = age;
     }
 
-    public Student(User carePerson, Integer age, ObjectId objectId, String username, String password, String role, String firstName, String secName, String email, String salt, List<AdressE> adresses, List<PhoneE> phoneses) {
+    public Student(Care care, Integer age, ObjectId objectId, String username, String password, String role, String firstName, String secName, String email, String salt, List<AdressE> adresses, List<PhoneE> phoneses) {
         super(objectId, username, password, role, firstName, secName, email, salt, adresses, phoneses);
-        this.carePerson = carePerson;
+        this.care = care;
         this.age = age;
     }
 
@@ -39,12 +39,12 @@ public class Student extends User{
     public Student() {
     }
 
-    public User getCarePerson() {
-        return carePerson;
+    public Care getCare() {
+        return care;
     }
 
-    public void setCarePerson(User carePerson) {
-        this.carePerson = carePerson;
+    public void setCare(Care care) {
+        this.care = care;
     }
 
     public Integer getAge() {
