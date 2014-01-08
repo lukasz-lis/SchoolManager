@@ -35,7 +35,29 @@ public class AdministratorResource {
         administatorDAO.save(administrator);
         LOGGER.debug(administrator);
     }
-    
+
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void update(Administrator administrator) {
+        administrator = linkNotUpdatedData(administrator);
+        if(administrator != null) {
+            administatorDAO.save(administrator);
+        }
+    }
+
+    private Administrator linkNotUpdatedData(Administrator administrator) {
+        LOGGER.debug(administrator.getUsername());
+        Administrator temp = administatorDAO.findOne("username", administrator.getUsername());
+        if (temp != null) {
+            LOGGER.debug(temp);
+            administrator.setPassword(temp.getPassword());
+            administrator.setSalt(temp.getSalt());
+            administrator.setObjectId(temp.getObjectId());
+            return administrator;
+        }
+        return null;
+    }
+
     @GET
     @Path("{username}")
     @Produces(MediaType.APPLICATION_JSON)

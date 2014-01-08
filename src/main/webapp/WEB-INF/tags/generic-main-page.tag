@@ -101,7 +101,9 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="asset/js/vendor/bootstrap.min.js"></script>
-        <script src="asset/js/vendor/jquery.tablesorter.js"></script>
+        <script src="http://www.jsviews.com/download/jsrender.js"></script>
+        <script src="http://www.jsviews.com/download/jsviews.js"></script>
+        <script src="http://malsup.github.io/jquery.form.js"></script>
    
         <script src="asset/js/functions.js"></script>       
         <script src="asset/js/main.js"></script>

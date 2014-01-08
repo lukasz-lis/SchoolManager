@@ -1,9 +1,8 @@
-(function ($) {
-
-    $.fn.serializeJSON = function () {
+(function($) {
+    $.fn.serializeJSON = function() {
         var json = {}
         var form = $(this);
-        form.find('input, select').each(function () {
+        form.find('input, select').each(function() {
             var val
             if (!this.name)
                 return;
@@ -23,87 +22,66 @@
                     }
                 } else {
                     json[this.name] =
-                        typeof val === 'string' ? [val, this.value] :
+                            typeof val === 'string' ? [val, this.value] :
                             $.isArray(val) ? $.merge(val, [this.value]) :
-                                this.value;
+                            this.value;
                 }
             } else {
                 json[this.name] = this.value;
             }
-        })
+        });
         return json;
-    }
+    };
 
-})(jQuery)
-
-function deserializeJSON(json) {
-    var json = $(this);
-    $.each(json, function (key, value) {
-        $("input[name='"+key+"']").val(value);
-    })
-}
-function editUserByModal(username, role) {
-    var response = findUserByUsername(username);
-    var json = response.responseJSON;
-    deserializeJSON(json);
-}
-
-function submitModalForm(formID) {
-    $('.modal').modal('hide');
-    $('#please-wait-dialog').modal();
-    $.ajax({
-        type: 'POST',
-        contentType: "application/json",
-        url: $(formID).attr('action'),
-        dataType: 'json',
-        data: JSON.stringify($(formID).serializeJSON()),
-        success: function (data, textStatus, jqXHR) {
-            refreshData($(formID).serializeJSON());
-            $('.modal').modal('hide');
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            $('.modal').modal('hide');
-            alert('ajax error: ' + textStatus);
-        }
-    });
-}
+})(jQuery);
 function findUserByUsername(api, username) {
     return $.ajax({
         type: 'GET',
         url: api + "/" + username,
         dataType: 'json',
-        error: function (jqXHR, textStatus, errorThrown) {
-            alert('ajax error: ' + textStatus);
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert('Ajax error: ' + textStatus);
         }
     });
 }
-function addNewRecordToUserDT(data) {
-    $('<tr>').append(
-        $('<td>').text(data.username),
-        $('<td>').text(data.firstName),
-        $('<td>').text(data.secName),
-        $('<td>').text(data.email),
-        $('<td>').html('<button class="edit-button-form" data-toggle="modal" data-target="#add-admin-form" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>')
-    ).appendTo('#list-user-table');
-
-}
-function refreshUserDT(api) {
-    $('#please-wait-dialog').modal();
-    $.ajax({
+function findAllAdmins() {
+    return $.ajax({
         type: 'GET',
-        url: api,
+        url: 'api/administrators',
         dataType: 'json',
-        success: function (data, textStatus, jqXHR) {
-            $.each(data, function (i, item) {
-                addNewRecordToUserDT(item);
-            });
+        error: function(jqXHR, textStatus, errorThrown) {
             $('.modal').modal('hide');
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            $('.modal').modal('hide');
-            alert('ajax error: ' + textStatus);
+            alert('Ajax error : ' + textStatus);
         }
     });
 }
-
+function editButtonClick(username, api) {
+    var res = findUserByUsername(api, username);
+    $.when(res).done(function() {
+        var json = res.responseJSON
+        var myTmpl = $.templates("#form-edit-template");
+        myTmpl.link("#edit-user-form", json);
+    });
+}
+function refreshAdminList() {
+    $('.modal').modal('hide');
+    $('#please-wait-dialog').modal();
+    var res = findAllAdmins();
+    $.when(res).done(function() {
+        var html = $.templates("#list-user-template").render(res.responseJSON);
+        $("#list-user-table tbody").html(html);
+        $('.modal').modal('hide');
+    });
+}
+function submitForm(formID) {
+    console.log(JSON.stringify($(formID).serializeJSON()));
+    $.ajax({
+        type: $(formID).attr('method'),
+        url: $(formID).attr('action'),
+        dataType: 'json',
+        data: JSON.stringify($(formID).serializeJSON())
+    }).done(function() {
+       refreshAdminList();               
+    });
+}
 
