@@ -4,9 +4,9 @@
 <fmt:setBundle basename="message"/>
 
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]> <html subject="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html subject="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html subject="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js"> <!--<![endif]-->
     <head>
@@ -30,7 +30,7 @@
     </head>
     <body>
         <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        <p subject="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
             your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
             improve your experience.</p>
         <![endif]-->
@@ -68,6 +68,7 @@
                             <li><a href="#about"><fmt:message key="navi.label.reports"/></a></li>
                             <li><a href="#contact"><fmt:message key="navi.label.stats"/></a></li>
                             <li><a href="user"><fmt:message key="navi.label.users"/></a></li>
+                            <li><a href="group"><fmt:message key="navi.label.groups"/></a></li>
                         </ul>
 
                         <ul class="nav navbar-nav navbar-right">

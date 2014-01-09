@@ -1,12 +1,18 @@
 $(document).ready(function() {
 
     $(document).on('click', '#add-user-submit', function() {
-        submitForm("#add-user-form");
+        submitUserForm("#add-user-form");
     });
     $(document).on('click', '#edit-user-submit', function() {
-        submitForm("#edit-user-form");
+        submitUserForm("#edit-user-form");
     });
-
+    $(document).on('click', '#form-group-submit', function() {
+        submitGroupForm("#group-form");
+    });
+    $(document).on('click', '#add-group-button', function() {
+        applyGroupForm();
+        $('#add-user-form #role').val("ADMIN");
+    });
     $(document).on('click', '#add-admin-button', function() {
         applyUserForm();
         $('#add-user-form #role').val("ADMIN");

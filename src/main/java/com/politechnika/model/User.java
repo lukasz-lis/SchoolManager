@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.mongodb.morphia.annotations.Indexed;
 
 /**
- * Model class
+ * Model group
  * User: Łukasz
  * Date: 18.11.13
  * Time: 22:39

@@ -8,7 +8,7 @@ import org.mongodb.morphia.annotations.Reference;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Model class.
+ * Model subject.
  * User: Łukasz
  * Date: 18.11.13
  * Time: 21:44
@@ -22,7 +22,7 @@ public class Progress {
     private String title;
     private String progress;
     @Reference
-    private Course course;
+    private Subject subject;
     @Reference
     private Student student;
     @Reference
@@ -68,12 +68,12 @@ public class Progress {
         this.progress = progress;
     }
 
-    public Course getCourse() {
-        return course;
+    public Subject getSubject() {
+        return subject;
     }
 
-    public void setCourse(Course course) {
-        this.course = course;
+    public void setSubject(Subject subject) {
+        this.subject = subject;
     }
 
     public Student getStudent() {

@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.mongodb.morphia.annotations.Embedded;
 
 /**
- * Model class.
+ * Model group.
  * User: Łukasz
  * Date: 18.11.13
  * Time: 21:16

@@ -17,7 +17,7 @@ import java.util.List;
  */
 @Entity
 @XmlRootElement
-public class Course {
+public class Subject {
     @Id
     private ObjectId objectId;
     private String name;

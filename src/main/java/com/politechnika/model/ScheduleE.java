@@ -22,7 +22,7 @@ public class ScheduleE {
     private Date endDate;
     private Integer duration;
     @Reference
-    private Course course;
+    private Subject subject;
 
     public ObjectId getObjectId() {
         return objectId;
@@ -56,11 +56,11 @@ public class ScheduleE {
         this.duration = duration;
     }
 
-    public Course getCourse() {
-        return course;
+    public Subject getSubject() {
+        return subject;
     }
 
-    public void setCourse(Course course) {
-        this.course = course;
+    public void setSubject(Subject subject) {
+        this.subject = subject;
     }
 }

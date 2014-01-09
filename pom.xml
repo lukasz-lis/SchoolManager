@@ -103,7 +103,7 @@
         <repository>
             <id>apache-snapshot</id>
             <name>Apache Snapshot Repository</name>
-            <url>https://repository.apache.org/content/groups/snapshots/</url>
+            <url>https://repository.apache.org/content/subjects/snapshots/</url>
         </repository>
         <repository>
             <id>snapshot-repository.java.net</id>

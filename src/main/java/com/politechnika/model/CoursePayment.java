@@ -16,15 +16,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class CoursePayment extends Payment {
     @Reference
-    private Course course;
+    private Subject subject;
 
 
-    public Course getCourse() {
-        return course;
+    public Subject getSubject() {
+        return subject;
     }
 
-    public void setCourse(Course course) {
-        this.course = course;
+    public void setSubject(Subject subject) {
+        this.subject = subject;
 
     }
 }

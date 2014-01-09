@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 /**
- * Model class.
+ * Model group.
  * User: Łukasz
  * Date: 18.11.13
  * Time: 21:54
@@ -18,14 +18,14 @@ import java.util.List;
  */
 @Entity
 @XmlRootElement
-public class Class {
+public class Group {
     @Id
     private ObjectId objectId;
     private String name;
     @Reference
     private List<Student> students;
     @Reference
-    private List<Course> courses;
+    private List<Subject> subjects;
     @Version
     private Long v;
 
@@ -53,12 +53,12 @@ public class Class {
         this.students = students;
     }
 
-    public List<Course> getCourses() {
-        return courses;
+    public List<Subject> getSubjects() {
+        return subjects;
     }
 
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
     }
 
     public Long getV() {

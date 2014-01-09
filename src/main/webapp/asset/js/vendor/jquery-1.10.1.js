@@ -40,7 +40,7 @@ var
 	// Map over the $ in case of overwrite
 	_$ = window.$,
 
-	// [[Class]] -> type pairs
+	// [[Group]] -> type pairs
 	class2type = {},
 
 	// List of deleted data cache ids, so we can reuse them
@@ -1559,10 +1559,10 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 	// Check if getElementsByClassName can be trusted
 	support.getElementsByClassName = assert(function( div ) {
-		div.innerHTML = "<div class='a'></div><div class='a i'></div>";
+		div.innerHTML = "<div group='a'></div><div group='a i'></div>";
 
 		// Support: Safari<4
-		// Catch class over-caching
+		// Catch group over-caching
 		div.firstChild.className = "i";
 		// Support: Opera<10
 		// Catch gEBCN failure to find non-leading classes
@@ -1634,7 +1634,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			return results;
 		};
 
-	// Class
+	// Group
 	Expr.find["CLASS"] = support.getElementsByClassName && function( className, context ) {
 		if ( typeof context.getElementsByClassName !== strundefined && documentIsHTML ) {
 			return context.getElementsByClassName( className );
@@ -2218,7 +2218,7 @@ Expr = Sizzle.selectors = {
 		},
 
 		"PSEUDO": function( pseudo, argument ) {
-			// pseudo-class names are case-insensitive
+			// pseudo-group names are case-insensitive
 			// http://www.w3.org/TR/selectors/#pseudo-classes
 			// Prioritize by case sensitivity in case custom pseudos are added with uppercase letters
 			// Remember that setFilters inherits from pseudos
@@ -3365,7 +3365,7 @@ jQuery.support = (function( support ) {
 
 	a.style.cssText = "top:1px;float:left;opacity:.5";
 
-	// Test setAttribute on camelCase class. If it works, we need attrFixes when doing get/setAttribute (ie6/7)
+	// Test setAttribute on camelCase group. If it works, we need attrFixes when doing get/setAttribute (ie6/7)
 	support.getSetAttribute = div.className !== "t";
 
 	// IE strips leading whitespace when .innerHTML is used
@@ -4194,7 +4194,7 @@ jQuery.fn.extend({
 
 		return this.each(function() {
 			if ( type === "string" ) {
-				// toggle individual class names
+				// toggle individual group names
 				var className,
 					i = 0,
 					self = jQuery( this ),
@@ -4207,14 +4207,14 @@ jQuery.fn.extend({
 					self[ state ? "addClass" : "removeClass" ]( className );
 				}
 
-			// Toggle whole class name
+			// Toggle whole group name
 			} else if ( type === core_strundefined || type === "boolean" ) {
 				if ( this.className ) {
 					// store className if set
 					jQuery._data( this, "__className__", this.className );
 				}
 
-				// If the element has a class name or if we're passed "false",
+				// If the element has a group name or if we're passed "false",
 				// then remove the whole classname (if there was one, the above saved it).
 				// Otherwise bring back whatever was previously saved (if anything),
 				// falling back to the empty string if nothing was stored.

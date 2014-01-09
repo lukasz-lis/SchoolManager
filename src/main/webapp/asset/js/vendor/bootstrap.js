@@ -713,7 +713,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     if (!isActive) {
       if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
         // if mobile we we use a backdrop because click events don't delegate
-        $('<div class="dropdown-backdrop"/>').insertAfter($(this)).on('click', clearMenus)
+        $('<div group="dropdown-backdrop"/>').insertAfter($(this)).on('click', clearMenus)
       }
 
       $parent.trigger(e = $.Event('show.bs.dropdown'))
@@ -981,7 +981,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     if (this.isShown && this.options.backdrop) {
       var doAnimate = $.support.transition && animate
 
-      this.$backdrop = $('<div class="modal-backdrop ' + animate + '" />')
+      this.$backdrop = $('<div group="modal-backdrop ' + animate + '" />')
         .appendTo(document.body)
 
       this.$element.on('click.dismiss.modal', $.proxy(function (e) {
@@ -1112,7 +1112,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     animation: true
   , placement: 'top'
   , selector: false
-  , template: '<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+  , template: '<div group="tooltip"><div group="tooltip-arrow"></div><div group="tooltip-inner"></div></div>'
   , trigger: 'hover focus'
   , title: ''
   , delay: 0
@@ -1493,7 +1493,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     placement: 'right'
   , trigger: 'click'
   , content: ''
-  , template: '<div class="popover"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+  , template: '<div group="popover"><div group="arrow"></div><h3 group="popover-title"></h3><div group="popover-content"></div></div>'
   })
 
 
