@@ -1,11 +1,10 @@
 package com.politechnika.model;
 
-import java.util.List;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Reference;
 
 import javax.xml.bind.annotation.XmlRootElement;
-import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Embedded;
 
 /**
  * Model class.
@@ -18,32 +17,19 @@ import org.bson.types.ObjectId;
 public class Student extends User{
 
     @Reference
-    private Care care;
+    private User care;
     private Integer age;
-
-    public Student(Care care, Integer age) {
-        this.care = care;
-        this.age = age;
-    }
-
-    public Student(Care care, Integer age, ObjectId objectId, String username, String password, String role, String firstName, String secName, String email, String salt, List<AdressE> adresses, List<PhoneE> phoneses) {
-        super(objectId, username, password, role, firstName, secName, email, salt, adresses, phoneses);
-        this.care = care;
-        this.age = age;
-    }
-
-    public Student(ObjectId objectId, String username, String password, String role, String firstName, String secName, String email, String salt, List<AdressE> adresses, List<PhoneE> phoneses) {
-        super(objectId, username, password, role, firstName, secName, email, salt, adresses, phoneses);
-    }
+    @Embedded
+    private AdressE adresses;
 
     public Student() {
     }
 
-    public Care getCare() {
+    public User getCare() {
         return care;
     }
 
-    public void setCare(Care care) {
+    public void setCare(User care) {
         this.care = care;
     }
 
@@ -54,4 +40,13 @@ public class Student extends User{
     public void setAge(Integer age) {
         this.age = age;
     }
+
+    public AdressE getAdresses() {
+        return adresses;
+    }
+
+    public void setAdresses(AdressE adresses) {
+        this.adresses = adresses;
+    }
+    
 }

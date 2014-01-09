@@ -87,35 +87,14 @@ public class MongoDBRealm extends AuthorizingRealm implements Serializable {
         return user;
     }
 
-    public static Administrator createAdminAuthorization(Administrator administrator) {
-        administrator = (Administrator) createAuthorization(administrator);
-        administrator.setRole(ADMIN_ROLE);
-        return administrator;
+    public static User createUserAuthorization(User user) {
+        user = (User)createAuthorization(user);
+        return user;
     }
 
     public static Student createStudentAuthorization(Student student) {
         student = (Student) createAuthorization(student);
-        student.setRole(STUDENT_ROLE);
         return student;
     }
-
-    public static Lecturer createLecturerAuthorization(Lecturer lecturer) {
-        lecturer = (Lecturer) createAuthorization(lecturer);
-        lecturer.setRole(LECTURER_ROLE);
-        return lecturer;
-    }
-
-    public static Care createCareAuthorization(Care care) {
-        care = (Care) createAuthorization(care);
-        care.setRole(CARE_ROLE);
-        return care;
-    }
-
-    public static Office createAdminAuthorization(Office office) {
-        office = (Office) createAuthorization(office);
-        office.setRole(OFFICE_ROLE);
-        return office;
-    }
-
 
 }

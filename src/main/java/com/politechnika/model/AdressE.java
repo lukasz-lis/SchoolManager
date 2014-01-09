@@ -1,6 +1,5 @@
 package com.politechnika.model;
 
-import javax.xml.bind.annotation.XmlRootElement;
 import org.mongodb.morphia.annotations.Embedded;
 
 /**
@@ -12,7 +11,8 @@ import org.mongodb.morphia.annotations.Embedded;
 
 @Embedded
 public class AdressE {
-   
+    
+    private String city;
     private String streetName;
     private String streetNumber;
     private String localNumber;
@@ -26,6 +26,14 @@ public class AdressE {
         this.streetNumber = streetNumber;
         this.localNumber = localNumber;
         this.postCode = postCode;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
         
     public String getStreetName() {

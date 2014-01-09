@@ -22,7 +22,7 @@ public class Course {
     private ObjectId objectId;
     private String name;
     @Reference
-    private List<Lecturer> lecturers;
+    private List<User> lecturers;
 
     public ObjectId getObjectId() {
         return objectId;
@@ -40,11 +40,11 @@ public class Course {
         this.name = name;
     }
 
-    public List<Lecturer> getLecturers() {
+    public List<User> getLecturers() {
         return lecturers;
     }
 
-    public void setLecturers(List<Lecturer> lecturers) {
+    public void setLecturers(List<User> lecturers) {
         this.lecturers = lecturers;
     }
 }
