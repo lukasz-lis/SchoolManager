@@ -12,6 +12,6 @@ import org.mongodb.morphia.dao.DAO;
  *
  * @author l.lis
  */
-public interface GroupDAO extends DAO<Group, ObjectId>{
+public interface GroupDAO extends DAO<Group, String>{
     
 }

@@ -31,7 +31,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"><fmt:message key="label.close" /></button>
-                <button id="form-group-submit" type="button"  data-toggle="modal"  class="btn btn-primary"><fmt:message key="user.add.form.label.add.button"/></button>
+                <button id="form-group-submit" type="button"  data-toggle="modal"  class="btn btn-primary"><fmt:message key="label.save"/></button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -57,7 +57,7 @@
             <tr>
             <td>{{:name}}</td>
             <td><button onclick="editButtonClick('{{:name}}')" data-toggle="modal" data-target="#edit-user-modal" class="butonik btn btn-primary btn-xs"><span class="glyphicon glyphicon-list"></span></button></td>
-            <td><button onclick="editButtonClick('{{:name}}')" data-toggle="modal" data-target="#edit-user-modal" class="butonik btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></td>
+            <td><button onclick="editGroupButtonClick('{{:name}}')" data-toggle="modal" data-target="#group-form-modal" class="butonik btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></td>
             </tr>
         </script>
 
@@ -66,6 +66,9 @@
                                 <label class="control-label" for="name"><fmt:message key="group.form.label.name"/></label>
                                 <input type="text" class="form-control" data-link="name" name="name"
                                        placeholder='<fmt:message key="group.form.label.name" />'>
+                               
+                                <input type="hidden" data-link="groupID" name="{{:groupID !=null ? 'groupID' : ''}}" >
+                               
                             </div>
         </script>
 

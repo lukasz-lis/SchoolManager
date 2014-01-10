@@ -18,7 +18,7 @@ import org.mongodb.morphia.annotations.Indexed;
 @Entity("User")
 public class User {
     @Id
-    private ObjectId objectId;
+    private String userID = new ObjectId().toString();
     @Indexed(unique = true)
     private String username;
     private String password;
@@ -34,13 +34,12 @@ public class User {
     public User() {
     }
 
-    
-    public ObjectId getObjectId() {
-        return objectId;
+    public String getUserID() {
+        return userID;
     }
 
-    public void setObjectId(ObjectId objectId) {
-        this.objectId = objectId;
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
     public String getUsername() {

@@ -13,13 +13,13 @@
         </script>
     </jsp:attribute>    
     <jsp:body>
-        <button id="add-admin-button" data-toggle="modal" data-target="#add-user-modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.admin"/></button>
-        <button id="add-lecturer-button" data-toggle="modal" data-target="#add-user-modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.lecturer"/></button>
-        <button id="add-student-button" data-toggle="modal" data-target="#add-user-modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.student"/></button>
-        <button id="add-care-button" data-toggle="modal" data-target="#add-user-modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.care"/></button>
-        <button id="add-office-button" data-toggle="modal" data-target="#add-user-modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.office"/></button>
+        <button id="add-admin-button" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.admin"/></button>
+        <button id="add-lecturer-button" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.lecturer"/></button>
+        <button id="add-student-button" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.student"/></button>
+        <button id="add-care-button" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.care"/></button>
+        <button id="add-office-button" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.office"/></button>
 
-        <div class="modal fade" id="add-user-modal" tabindex="-1" role="dialog" aria-labelledby="add-user-label"
+        <div class="modal fade" id="user-form-modal" tabindex="-1" role="dialog" aria-labelledby="add-user-label"
              aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -28,14 +28,14 @@
                         <h4 class="modal-title" id="add-user-label"><fmt:message key="user.add.modal.label.add.admin"/></h4>
                     </div>
                     <div class="modal-body">
-                        <form id="add-user-form">
+                        <form id="user-form">
 
                            
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"><fmt:message key="label.close" /></button>
-                        <button id="add-user-submit" type="button"  data-toggle="modal"  class="btn btn-primary"><fmt:message key="user.add.form.label.add.button"/></button>
+                        <button id="form-user-submit" type="button"  data-toggle="modal"  class="btn btn-primary"><fmt:message key="label.save"/></button>
                     </div>
                 </div>
                 <!-- /.modal-content -->
@@ -43,31 +43,6 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-
-        <div class="modal fade" id="edit-user-modal" tabindex="-1" role="dialog" aria-labelledby="admin-add-label"
-             aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="admin-add-label"><fmt:message key="user.add.modal.label.add.admin"/></h4>
-                    </div>
-                    <div class="modal-body">
-                        <form id="edit-user-form">
-               
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><fmt:message key="label.close" /></button>
-                        <button  id="edit-user-submit" type="button"  data-toggle="modal"  class="btn btn-primary"><fmt:message key="user.add.form.label.add.button"/></button>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
-        </div>
-        <!-- /.modal -->
-
 
         <table id="list-user-table" class="table table-striped tablesorter">
             <thead>
@@ -89,7 +64,7 @@
             <td>{{:firstName}}</td>
             <td>{{:secName}}</td>
             <td>{{:email}}</td>
-            <td><button onclick="editButtonClick('{{:username}}')" data-toggle="modal" data-target="#edit-user-modal" class="butonik btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></td>
+            <td><button onclick="editUserButtonClick('{{:username}}')" data-toggle="modal" data-target="#user-form-modal" class="butonik btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></td>
             </tr>  
         </script>
         
@@ -105,10 +80,16 @@
 
                             <div class="form-group ">
                                 <label class="control-label" for="username"><fmt:message
-                                        key="user.add.form.label.username"/></label>
+                                        key="user.add.form.label.username"/></label>  
+                            {^{if username!=null }}
                                 <input type="text" class="form-control" data-link="username" id="username"
-                                       placeholder='<fmt:message key="user.add.form.label.username" />' disabled>
-                                <input type="hidden" data-link="username" name="username" >
+                                       placeholder='<fmt:message key="user.add.form.label.username" />' disabled>                               
+                                <input type="hidden" data-link="username" name="username" > 
+                          {{/if}}
+                             {^{if username==null }}
+                                <input type="text" class="form-control id="username" name="username"
+                                       placeholder='<fmt:message key="user.add.form.label.username" />'>     
+                            {{/if}}                      
 
                             </div>
 
@@ -172,7 +153,25 @@
                                         key="user.add.form.label.email"/></label>
                                 <input type="email" class="form-control" data-link="email" name="email" id="email"
                                        placeholder='<fmt:message key="user.add.form.label.email" />'>
-                            </div>          
+                            </div>  
+                    {^{if username==null }}
+                              <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="control-label" for="password"><fmt:message
+                                                key="user.add.form.label.password"/></label>
+                                        <input type="text" class="form-control" id="password" name="password"
+                                               placeholder='<fmt:message key="user.add.form.label.password" />'>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label" for="repeatPassword"><fmt:message
+                                                key="user.add.form.label.password.repeat"/></label>
+                                        <input type="text" class="form-control"  id="repeatPassword"
+                                               placeholder='<fmt:message key="user.add.form.label.password.repeat" />'>
+                                    </div>
+                                </div>
+                            </div>
+                    {{/if}}
         </script>
 
         
@@ -189,10 +188,15 @@
                             <div class="form-group ">
                                 <label class="control-label" for="username"><fmt:message
                 key="user.add.form.label.username"/></label>
+                            {^{if username!=null }}
                                 <input type="text" class="form-control" data-link="username" id="username"
-                                       placeholder='<fmt:message key="user.add.form.label.username" />' disabled>
-                                <input type="hidden" data-link="username" name="username" >
-
+                                       placeholder='<fmt:message key="user.add.form.label.username" />' disabled>                               
+                                <input type="hidden" data-link="username" name="username" > 
+                          {{/if}}
+                             {^{if username==null }}
+                                <input type="text" class="form-control id="username" name="username"
+                                       placeholder='<fmt:message key="user.add.form.label.username" />'>     
+                            {{/if}}   
                             </div>
 
                             <div class="form-group">
@@ -215,6 +219,24 @@
                                 <input type="email" class="form-control" data-link="email" name="email" id="email"
                                        placeholder='<fmt:message key="user.add.form.label.email" />'>
                             </div>
+                    {^{if username==null }}
+                             <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="control-label" for="password"><fmt:message
+                                                key="user.add.form.label.password"/></label>
+                                        <input type="text" class="form-control" id="password" name="password"
+                                               placeholder='<fmt:message key="user.add.form.label.password" />'>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label" for="repeatPassword"><fmt:message
+                                                key="user.add.form.label.password.repeat"/></label>
+                                        <input type="text" class="form-control"  id="repeatPassword"
+                                               placeholder='<fmt:message key="user.add.form.label.password.repeat" />'>
+                                    </div>
+                                </div>
+                            </div>
+                    {{/if}}
         </script>
     </jsp:body>
 </t:generic-main-page>

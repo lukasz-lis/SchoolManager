@@ -63,7 +63,7 @@ public class UserResource {
             LOGGER.debug(temp);
             user.setPassword(temp.getPassword());
             user.setSalt(temp.getSalt());
-            user.setObjectId(temp.getObjectId());
+            user.setUserID(temp.getUserID());
             return user;
         }
         return null;

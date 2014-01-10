@@ -8,21 +8,19 @@ import org.mongodb.morphia.annotations.Reference;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Model subject.
- * User: Łukasz
- * Date: 18.11.13
- * Time: 21:44
+ * Model subject. User: Łukasz Date: 18.11.13 Time: 21:44
  */
 @Entity
 @XmlRootElement
 public class Progress {
+
     @Id
-    private ObjectId objectId;
+    private String progressID = new ObjectId().toString();
     private String description;
     private String title;
     private String progress;
     @Reference
-    private Subject subject;
+    private Course subject;
     @Reference
     private Student student;
     @Reference
@@ -52,12 +50,12 @@ public class Progress {
         this.createdBy = createdBy;
     }
 
-    public ObjectId getObjectId() {
-        return objectId;
+    public String getProgressID() {
+        return progressID;
     }
 
-    public void setObjectId(ObjectId objectId) {
-        this.objectId = objectId;
+    public void setProgressID(String progressID) {
+        this.progressID = progressID;
     }
 
     public String getProgress() {
@@ -68,11 +66,11 @@ public class Progress {
         this.progress = progress;
     }
 
-    public Subject getSubject() {
+    public Course getSubject() {
         return subject;
     }
 
-    public void setSubject(Subject subject) {
+    public void setSubject(Course subject) {
         this.subject = subject;
     }
 

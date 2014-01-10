@@ -13,7 +13,7 @@ import org.mongodb.morphia.dao.BasicDAO;
  *
  * @author l.lis
  */
-public class StudentDAOImpl extends BasicDAO<Student, ObjectId> implements StudentDAO {
+public class StudentDAOImpl extends BasicDAO<Student, String> implements StudentDAO {
     public StudentDAOImpl() {
         super(MongoDBDataStore.getDs());
     }

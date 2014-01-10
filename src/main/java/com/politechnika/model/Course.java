@@ -17,21 +17,21 @@ import java.util.List;
  */
 @Entity
 @XmlRootElement
-public class Subject {
+public class Course {
     @Id
-    private ObjectId objectId;
+    private String courseID = new ObjectId().toString();
     private String name;
     @Reference
     private List<User> lecturers;
 
-    public ObjectId getObjectId() {
-        return objectId;
+    public String getCourseID() {
+        return courseID;
     }
 
-    public void setObjectId(ObjectId objectId) {
-        this.objectId = objectId;
+    public void setCourseID(String courseID) {
+        this.courseID = courseID;
     }
-
+    
     public String getName() {
         return name;
     }

@@ -17,7 +17,7 @@ import org.mongodb.morphia.dao.BasicDAO;
  */
 @Singleton
 @Startup
-public class UserDAOImpl extends BasicDAO<User, ObjectId> implements UserDAO {
+public class UserDAOImpl extends BasicDAO<User, String> implements UserDAO {
     public UserDAOImpl() {
         super(MongoDBDataStore.getDs());
     }

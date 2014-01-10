@@ -10,17 +10,15 @@ import java.math.BigDecimal;
 import java.sql.Date;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Łukasz
- * Date: 19.11.13
- * Time: 22:53
- * To change this template use File | Settings | File Templates.
+ * Created with IntelliJ IDEA. User: Łukasz Date: 19.11.13 Time: 22:53 To change
+ * this template use File | Settings | File Templates.
  */
 @Entity("Payment")
 @XmlRootElement
 public abstract class Payment {
+
     @Id
-    private ObjectId objectId;
+    private String paymentID = new ObjectId().toString();
     @Reference
     private Student student;
     private Date paymentDate;
@@ -56,12 +54,12 @@ public abstract class Payment {
         this.student = student;
     }
 
-    public ObjectId getObjectId() {
-        return objectId;
+    public String getPaymentID() {
+        return paymentID;
     }
 
-    public void setObjectId(ObjectId objectId) {
-        this.objectId = objectId;
+    public void setPaymentID(String paymentID) {
+        this.paymentID = paymentID;
     }
 
     public Date getPaymentDate() {

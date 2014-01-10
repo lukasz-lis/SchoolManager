@@ -20,23 +20,23 @@ import java.util.List;
 @XmlRootElement
 public class Group {
     @Id
-    private ObjectId objectId;
+    private String groupID = new ObjectId().toString();
     private String name;
     @Reference
     private List<Student> students;
     @Reference
-    private List<Subject> subjects;
+    private List<Course> subjects;
     @Version
     private Long v;
 
-    public ObjectId getObjectId() {
-        return objectId;
+    public String getGroupID() {
+        return groupID;
     }
 
-    public void setObjectId(ObjectId objectId) {
-        this.objectId = objectId;
+    public void setGroupID(String groupID) {
+        this.groupID = groupID;
     }
-
+    
     public String getName() {
         return name;
     }
@@ -53,11 +53,11 @@ public class Group {
         this.students = students;
     }
 
-    public List<Subject> getSubjects() {
+    public List<Course> getSubjects() {
         return subjects;
     }
 
-    public void setSubjects(List<Subject> subjects) {
+    public void setSubjects(List<Course> subjects) {
         this.subjects = subjects;
     }
 

@@ -54,7 +54,7 @@ public class StudentResource {
             LOGGER.debug(temp);
             student.setPassword(temp.getPassword());
             student.setSalt(temp.getSalt());
-            student.setObjectId(temp.getObjectId());
+            student.setUserID(temp.getUserID());
             return student;
         }
         return null;
