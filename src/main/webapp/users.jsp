@@ -51,6 +51,7 @@
                     <th scope="col"><fmt:message key="user.col.list.label.firstName" /></th>
                     <th scope="col"><fmt:message key="user.col.list.label.secName" /></th>
                     <th scope="col"><fmt:message key="user.col.list.label.email" /></th>
+                    <th scope="col"><fmt:message key="user.col.list.label.role" /></th>
                     <th scope="col"><fmt:message key="list.label.edit" /></th>
                 </tr>
             </thead>
@@ -64,6 +65,7 @@
             <td>{{:firstName}}</td>
             <td>{{:secName}}</td>
             <td>{{:email}}</td>
+            <td>{{:role}}</td>
             <td><button onclick="editUserButtonClick('{{:username}}')" data-toggle="modal" data-target="#user-form-modal" class="butonik btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></td>
             </tr>  
         </script>

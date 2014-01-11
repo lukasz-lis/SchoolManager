@@ -38,9 +38,9 @@ public class GroupResource {
     }
 
     @GET
-    @Path("{name}")
+    @Path("{groupID}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Group findByGroupName(@PathParam("name") String name) {
-        return groupDAO.findOne("name", name);
+    public Group findByGroupName(@PathParam("groupID") String groupID) {
+        return groupDAO.findOne("groupID", groupID);
     }
 }

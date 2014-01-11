@@ -19,6 +19,10 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import org.apache.log4j.Logger;
+import org.mongodb.morphia.query.Query;
+import org.mongodb.morphia.query.QueryImpl;
+
+import java.util.List;
 
 /**
  *
@@ -29,6 +33,13 @@ public class StudentResource {
         private static final Logger LOGGER = Logger.getLogger(UserResource.class);
     @EJB
     private StudentDAO studentDAO;
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Student> getStudents() {
+        Query<Student> query = studentDAO.createQuery().filter("role", MongoDBRealm.STUDENT_ROLE);
+        return studentDAO.find(query).asList();
+    }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)

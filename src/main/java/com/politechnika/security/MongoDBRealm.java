@@ -28,11 +28,11 @@ import org.apache.shiro.util.SimpleByteSource;
 
 public class MongoDBRealm extends AuthorizingRealm implements Serializable {
 
-    static final String ADMIN_ROLE = "ADMIN";
-    static final String STUDENT_ROLE = "STUDENT";
-    static final String LECTURER_ROLE = "LECTURER";
-    static final String CARE_ROLE = "CARE";
-    static final String OFFICE_ROLE = "OFFICE";
+    public static final String ADMIN_ROLE = "ADMIN";
+    public static final String STUDENT_ROLE = "STUDENT";
+    public static final String LECTURER_ROLE = "LECTURER";
+    public  static final String CARE_ROLE = "CARE";
+    public static final String OFFICE_ROLE = "OFFICE";
 
     private Logger LOG;
     private Datastore ds;
