@@ -5,7 +5,11 @@
 <fmt:setBundle basename="message"/>
 
 <div class="container">
-    <div class="modal fade" id="group-form-modal" tabindex="-1" role="dialog" aria-labelledby="add-user-label"
+
+    <button id="add-student-group-button" data-toggle="modal" data-target="#add-student-group-modal" class="btn btn-primary"><span
+            class="glyphicon glyphicon-plus"></span><fmt:message key="group.add.button.label"/></button>
+
+    <div class="modal fade" id="add-student-group-modal" tabindex="-1" role="dialog" aria-labelledby="add-user-label"
          aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -15,10 +19,17 @@
                             key="user.add.modal.label.add.admin"/></h4>
                 </div>
                 <div class="modal-body">
-                    <form id="group-form">
-
-
-                    </form>
+                    <table id="add-student-group-table" class="table table-striped tablesorter">
+                        <thead>
+                        <tr>
+                            <th scope="col"><fmt:message key="group.col.list.label.name"/></th>
+                            <th scope="col"><fmt:message key="group.col.list.label.students"/></th>
+                            <th scope="col"><fmt:message key="label.delete"/></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal"><fmt:message
@@ -34,7 +45,7 @@
     <!-- /.modal -->
 
 
-    <table id="list-students-table" class="table table-striped tablesorter">
+    <table id="list-students-group-table" class="table table-striped tablesorter">
         <thead>
         <tr>
             <th scope="col"><fmt:message key="group.col.list.label.name"/></th>
@@ -47,7 +58,7 @@
     </table>
 
 
-    <script id="table-students-template" type="text/x-jsrender">
+    <script id="list-students-group-template" type="text/x-jsrender">
         <tr>
             <td>{{:firstName}}</td>
             <td>{{:secName}}</td>
@@ -59,4 +70,15 @@
         </tr>
     </script>
 
+    <script id="all-students-group-template" type="text/x-jsrender">
+        {^{for students}}
+        <tr >
+            <td><span data-link="firstName"></span></td>
+            <td><span data-link="secName"></span></td>
+            <td>
+                <button id="check-student-group-button" class="butonik btn btn-primary btn-xs"><span data-link="selectedIndex"></span></button>
+            </td>
+        </tr>
+        {{/for}}
+    </script>
 </div>

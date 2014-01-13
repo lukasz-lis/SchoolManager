@@ -4,7 +4,7 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <fmt:setBundle basename="message"/>
 
-<t:generic-main-page>
+<t:index>
 <jsp:attribute name="script">
         <script>
             $(document).ready(function () {
@@ -130,4 +130,4 @@
         </script>
 
     </jsp:body>
-</t:generic-main-page>
+</t:index>

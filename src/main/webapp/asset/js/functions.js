@@ -20,6 +20,7 @@ function editUserButtonClick(username) {
         }
     });
 }
+
 function editCourseButtonClick(name) {
     $.ajax({
         type: 'GET',

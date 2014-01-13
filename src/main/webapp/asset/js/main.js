@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     $(document).on('click', '#form-user-submit', function () {
         submitUserForm("#user-form");
     });
@@ -35,24 +36,29 @@ $(document).ready(function () {
         applyStudentForm();
         $('#user-form #role').val("STUDENT");
     });
+
     $(document).on('click', '#show-students-group-button', function (event) {
         event.preventDefault();
         var groupID = $(this).attr('href');
         $.get('group-students.jsp', function (data) {
-            $('#page').fadeOut(function(){
+            $('#page').fadeOut(function () {
                 $('#page').html(data);
                 $('#please-wait-dialog').modal();
-                $.get('api/groups/'+groupID, function (data) {
+                $.get('api/groups/' + groupID,function (data) {
                     console.log(data);
-                    var html = $.templates("#table-students-template").render(data.students);
-                    $("#list-students-table tbody").html(html);
+                    var html = $.templates("#list-students-group-template").render(data.students);
+                    $("#list-students-group-table tbody").html(html);
                     $('.modal').modal('hide');
-                });
+                }).error(function () {
+                        alert('Ajax error');
+                        $('.modal').modal('hide');
+                    });
             });
             $('#page').fadeIn();
         });
     });
-});
+})
+;
 
 
 
