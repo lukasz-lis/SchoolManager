@@ -3,41 +3,93 @@
  */
 var kujonControllers = angular.module('kujonControllers', []);
 
-kujonControllers.controller('AddOrderController', ['$scope', 'UserService', function ($scope, UserService) {
+kujonControllers.controller('AddOrderController', ['$scope', 'UserService', function($scope, UserService) {
 
-    $scope.message = UserService.query();
+        $scope.message = UserService.query();
 
-}]);
+    }]);
 
-kujonControllers.controller('UserListCtrl', ['$scope', '$location', 'UserService', function ($scope, $location, UserService) {
+kujonControllers.controller('UserListCtrl', ['$scope', '$location', 'UsersService', function($scope, $location, UsersService) {
 
-    $scope.users = UserService.query();
+        $scope.createUser = function(role) {
+            $location.path('/users-creation/' + role);
+        };
 
-    $scope.createUser = function (role) {
-        $location.path('/users-creation/'+role);
-    };
+        $scope.createStudent = function() {
+            $location.path('/students-creation');
+        };
 
+        $scope.editUser = function(id) {
+            $location.path('/users-details/' + id);
+        };
 
-}]);
-kujonControllers.controller('UserCreationCtrl', ['$scope','$routeParams', '$location', 'UserService', function ($scope, $routeParams, $location, UserService) {
+        $scope.editStudent = function(id) {
+            $location.path('/students-details/' + id);
+        };
 
-    $scope.user = {};
-    $scope.user.role = $routeParams.role;
+        $scope.users = UsersService.query();
+    }]);
+kujonControllers.controller('UserCreationCtrl', ['$scope', '$routeParams', '$location', 'UsersService', function($scope, $routeParams, $location, UsersService) {
 
-    $scope.createUser = function () {
-        UserService.create($scope.user);
+        $scope.user = {};
+        $scope.user.role = $routeParams.role;
 
-        $location.path('/users');
-    }
+        $scope.createUser = function() {
+            UsersService.create($scope.user);
+            $location.path('/users');
+        };
 
-}]);
-kujonControllers.controller('UserDetailsCtrl', ['$scope', '$routeParams', '$location', 'UserService', function ($scope, $routeParams, $location, UserService) {
+        $scope.close = function() {
+            $location.path('/users');
+        };
 
-    $scope.updateUser = function () {
+    }]);
+kujonControllers.controller('UserDetailsCtrl', ['$scope', '$routeParams', '$location', 'UsersService', function($scope, $routeParams, $location, UsersService) {
 
-        UserService.update($scope.user);
-    }
+        $scope.user = {};
 
-    $scope.user = UserService.show({id: $routeParams.id});
+        $scope.updateUser = function() {
+            UsersService.update($scope.user);
+            $location.path('/users');
+        };
 
-}]);
+        $scope.close = function() {
+            $location.path('/users');
+        };
+
+        $scope.user = UsersService.get({id: $routeParams.id});
+
+    }]);
+
+kujonControllers.controller('StudentCreationCtrl', ['$scope', '$routeParams', '$location', 'StudentsService', function($scope, $routeParams, $location, StudentsService) {
+
+        $scope.user = {};
+        $scope.user.role = 'STUDENT';
+
+        $scope.createUser = function() {
+            console.log($scope.user);
+            StudentsService.create($scope.user);
+            $location.path('/users');
+        };
+
+        $scope.close = function() {
+            $location.path('/users');
+        };
+
+    }]);
+kujonControllers.controller('StudentDetailsCtrl', ['$scope', '$routeParams', '$location', 'StudentsService', function($scope, $routeParams, $location, StudentsService) {
+
+        $scope.user = {};
+
+        $scope.updateUser = function() {
+            StudentsService.update($scope.user);
+            $location.path('/users');
+        };
+
+        $scope.close = function() {
+            $location.path('/users');
+        };
+
+        $scope.user = StudentsService.get({id: $routeParams.id});
+
+    }]);

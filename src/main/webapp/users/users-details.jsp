@@ -2,7 +2,6 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <fmt:setBundle basename="message"/>
 
-
 <form novalidate="novalidate" id="user-form">
     <input type="hidden" ng-model="user.role" name="role">
 
@@ -11,7 +10,7 @@
                 key="user.add.form.label.username"/></label>
 
         <input type="text" class="form-control" ng-model="user.username" id="username"
-               placeholder='<fmt:message key="user.add.form.label.username"/>'>
+               placeholder='<fmt:message key="user.add.form.label.username"/>' disabled="">
 
     </div>
 
@@ -44,27 +43,10 @@
                placeholder='<fmt:message key="user.add.form.label.email"/>'>
     </div>
 
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-6">
-                <label class="control-label" for="password"><fmt:message
-                        key="user.add.form.label.password"/></label>
-                <input type="text" class="form-control" id="password" ng-model="user.password" name="password"
-                       placeholder='<fmt:message key="user.add.form.label.password"/>'>
-            </div>
-            <div class="col-md-6">
-                <label class="control-label" for="repeatPassword"><fmt:message
-                        key="user.add.form.label.password.repeat"/></label>
-                <input type="text" class="form-control" id="repeatPassword"
-                       placeholder='<fmt:message key="user.add.form.label.password.repeat"/>'>
-            </div>
-        </div>
-    </div>
 </form>
 
 <a ng-click="close()" class="btn btn-default" ><fmt:message
         key="label.close"/></a>
-<a ng-click="createUser()"  class="btn btn-primary"><fmt:message
+<a ng-click="updateUser()"  class="btn btn-primary"><fmt:message
         key="label.save"/></a>
-
 

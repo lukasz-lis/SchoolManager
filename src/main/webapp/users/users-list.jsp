@@ -5,13 +5,13 @@
 
 <a ng-click="createUser('ADMIN')" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span
         class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.admin"/></a>
-<a ng-click="createUser()" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span
+<a ng-click="createUser('LECTURER')" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span
         class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.lecturer"/></a>
-<a ng-click="createUser()" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span
+<a ng-click="createStudent()" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span
         class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.student"/></a>
-<a ng-click="createUser()"data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span
+<a ng-click="createUser('CARE')"data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span
         class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.care"/></a>
-<a ng-click="createUser()" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span
+<a ng-click="createUser('OFFICE')" data-toggle="modal" data-target="#user-form-modal" class="btn btn-primary"><span
         class="glyphicon glyphicon-plus"></span><fmt:message key="user.add.button.label.add.office"/></a>
 
 
@@ -34,7 +34,10 @@
         <td>{{user.email}}</td>
         <td>{{user.role}}</td>
         <td>
-            <a ng-click="showUser(user.userID)" data-toggle="modal"
+            <a ng-if="user.role != 'STUDENT'" ng-click="editUser(user.userID)" data-toggle="modal"
+                    data-target="#user-form-modal"
+                    class="butonik btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a ng-if="user.role == 'STUDENT'" ng-click="editStudent(user.userID)" data-toggle="modal"
                     data-target="#user-form-modal"
                     class="butonik btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></a>
         </td>
@@ -42,74 +45,3 @@
 
     </tbody>
 </table>
-
-
-<script id="form-user-template" type="text/x-jsrender">
-                            <div class="form-group ">
-                                <label class="control-label" for="name"><fmt:message
-        key="user.add.form.label.name"/></label>
-                                <input type="text" class="form-control" data-link="firstName" name="firstName" id="name"
-                                       placeholder='<fmt:message key="user.add.form.label.name"/>'>
-                                <input type="hidden"  data-link="role" name="role" id="role">
-
-                            </div>
-
-                            <div class="form-group ">
-                                <label class="control-label" for="username"><fmt:message
-        key="user.add.form.label.username"/></label>
-                            {^{if username!=null }}
-                                <input type="text" class="form-control" data-link="username" id="username"
-                                       placeholder='<fmt:message key="user.add.form.label.username"/>' disabled>
-                                <input type="hidden" data-link="username" name="username" > 
-                          {{/if}}
-                             {^{if username==null }}
-                                <input type="text" class="form-control id="username" name="username"
-                                       placeholder='<fmt:message key="user.add.form.label.username"/>'>
-                            {{/if}}   
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label" for="secname"><fmt:message
-        key="user.add.form.label.secname"/></label>
-                                <input type="text" class="form-control" data-link="secName" name="secName" id="secname"
-                                       placeholder='<fmt:message key="user.add.form.label.secname"/>'>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label" for="phone"><fmt:message
-        key="user.add.form.label.phone.number"/></label>
-                                <input type="tel" class="form-control" data-link="phoneses.phoneNumber" name="phoneses[0][phoneNumber]" id="phone"
-                                       placeholder='<fmt:message key="user.add.form.label.phone.number"/>'>
-                            </div>
-
-                            <div class="form-group ">
-                                <label class="control-label" for="email"><fmt:message
-        key="user.add.form.label.email"/></label>
-                                <input type="email" class="form-control" data-link="email" name="email" id="email"
-                                       placeholder='<fmt:message key="user.add.form.label.email"/>'>
-                            </div>
-                    {^{if username==null }}
-                             <div class="form-group">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label class="control-label" for="password"><fmt:message
-        key="user.add.form.label.password"/></label>
-                                        <input type="text" class="form-control" id="password" name="password"
-                                               placeholder='<fmt:message key="user.add.form.label.password"/>'>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="control-label" for="repeatPassword"><fmt:message
-        key="user.add.form.label.password.repeat"/></label>
-                                        <input type="text" class="form-control"  id="repeatPassword"
-                                               placeholder='<fmt:message key="user.add.form.label.password.repeat"/>'>
-                                    </div>
-                                </div>
-                            </div>
-                    {{/if}}
-
-
-
-
-
-
-</script>

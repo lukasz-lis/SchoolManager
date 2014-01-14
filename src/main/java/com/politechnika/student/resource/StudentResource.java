@@ -20,7 +20,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import org.apache.log4j.Logger;
 import org.mongodb.morphia.query.Query;
-import org.mongodb.morphia.query.QueryImpl;
 
 import java.util.List;
 
@@ -72,10 +71,10 @@ public class StudentResource {
     }
 
     @GET
-    @Path("{username}")
+    @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public User findByUsername(@PathParam("username") String username) {
-        return studentDAO.findOne("username", username);
+    public Student findByUsername(@PathParam("id") String id) {
+        return studentDAO.findOne("userID", id);
     }
     
     

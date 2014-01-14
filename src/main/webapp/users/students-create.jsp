@@ -28,6 +28,46 @@
         <input type="text" class="form-control" ng-model="user.secName" name="secName" id="secname"
                placeholder='<fmt:message key="user.add.form.label.secname"/>'>
     </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label" for="city"><fmt:message
+                        key="user.add.form.label.city"/></label>
+                <input type="text" class="form-control" id="city" ng-model="user.adresses.city"
+                       placeholder='<fmt:message key="user.add.form.label.city" />'>
+            </div>
+            <div class="col-md-4">
+                <label class="control-label" for="postcode"><fmt:message
+                        key="user.add.form.label.postcode"/></label>
+                <input type="text" class="form-control" ng-model="user.adresses.postcode" id='postcode' 
+                       placeholder='<fmt:message key="user.add.form.label.postcode" />'>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-6">
+                <label class="control-label" for="street-name"><fmt:message
+                        key="user.add.form.label.street.name"/></label>
+                <input type="text" class="form-control" ng-model="user.adresses.streetName" id="street-name"
+                       placeholder='<fmt:message key="user.add.form.label.street.name" />'>
+            </div>
+            <div class="col-md-3">
+                <label class="control-label" for="street-number"><fmt:message
+                        key="user.add.form.label.street.local.numer"/></label>
+                <input type="text" class="form-control" ng-model="user.adresses.streetNumber"
+                       id="street-number"
+                       placeholder='<fmt:message key="user.add.form.label.street.local.numer" />'>
+            </div>
+            <div class="col-md-3">
+                <label class="control-label" for="street-number"><fmt:message
+                        key="user.add.form.label.street.street.numer"/></label>
+                <input type="text" class="form-control" ng-model="user.adresses.localNumber" id="local-number"
+                       placeholder='<fmt:message key="user.add.form.label.street.street.numer" />'>
+            </div>
+        </div>
+    </div>
 
     <div class="form-group">
         <label class="control-label" for="phone"><fmt:message
@@ -49,13 +89,13 @@
             <div class="col-md-6">
                 <label class="control-label" for="password"><fmt:message
                         key="user.add.form.label.password"/></label>
-                <input type="text" class="form-control" id="password" ng-model="user.password" name="password"
+                <input type="password" class="form-control" id="password" ng-model="user.password" name="password"
                        placeholder='<fmt:message key="user.add.form.label.password"/>'>
             </div>
             <div class="col-md-6">
                 <label class="control-label" for="repeatPassword"><fmt:message
                         key="user.add.form.label.password.repeat"/></label>
-                <input type="text" class="form-control" id="repeatPassword"
+                <input type="password" class="form-control" id="repeatPassword"
                        placeholder='<fmt:message key="user.add.form.label.password.repeat"/>'>
             </div>
         </div>

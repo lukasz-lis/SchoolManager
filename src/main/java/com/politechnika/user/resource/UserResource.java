@@ -70,9 +70,9 @@ public class UserResource {
     }
 
     @GET
-    @Path("{username}")
+    @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public User findByUsername(@PathParam("username") String username) {
-        return userDAO.findOne("username", username);
+    public User findByUsername(@PathParam("id") String id) {
+        return userDAO.findOne("userID", id);
     }
 }

@@ -19,11 +19,11 @@ kujon.config(['$routeProvider',
             }).
             when('/students-creation', {
                 templateUrl: 'users/students-create.jsp',
-                controller: 'StudentsCreationCtrl'
+                controller: 'StudentCreationCtrl'
             }).
-            when('/students-details', {
+            when('/students-details/:id', {
                 templateUrl: 'users/students-details.jsp',
-                controller: 'StudentsDetailsCtrl'
+                controller: 'StudentDetailsCtrl'
             }).
             when('/', {
                 templateUrl: 'main.jsp',
