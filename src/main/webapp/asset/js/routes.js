@@ -33,6 +33,10 @@ kujon.config(['$routeProvider',
                 templateUrl: 'groups/groups.jsp',
                 controller: 'GroupCtrl'
             }).
+            when('/group-students/:id', {
+                templateUrl: 'groups/group-students.jsp',
+                controller: 'GroupStudentsCtrl'
+            }).
             when('/courses', {
                 templateUrl: 'courses/courses.jsp',
                 controller: 'CourseCtrl'

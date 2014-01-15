@@ -108,7 +108,7 @@ kujonControllers.controller('GroupCtrl', ['$scope', '$routeParams', '$location',
         console.log($scope.group);
         GroupsService.update($scope.group);
         $scope.groups = GroupsService.query();
-        $scope.group= {};
+        $scope.group = {};
         $('.modal').modal('hide');
     };
 
@@ -118,6 +118,10 @@ kujonControllers.controller('GroupCtrl', ['$scope', '$routeParams', '$location',
 
     $scope.close = function () {
         $scope.group = {};
+    };
+
+    $scope.showStudents = function (groupID) {
+        $location.path('/group-students/' + groupID);
     };
 
     $scope.groups = GroupsService.query();
@@ -153,3 +157,33 @@ kujonControllers.controller('CourseCtrl', ['$scope', '$routeParams', '$location'
     $scope.courses = CoursesService.query();
 
 }]);
+kujonControllers.controller('GroupStudentsCtrl', ['$scope', '$routeParams', '$location', 'GroupsService', 'StudentsService', function ($scope, $routeParams, $location, GroupsService, StudentsService) {
+
+    $scope.group = GroupsService.get({id: $routeParams.id});
+
+    $scope.showStudents = function () {
+        $scope.students = StudentsService.query();
+    }
+
+    $scope.addStudent = function (index) {
+        $scope.group.students.push($scope.students[index]);
+        $scope.students.splice(index, 1);
+    }
+
+    $scope.deleteStudent = function(index) {
+        $scope.group.students.splice(index, 1);
+    }
+
+    $scope.back = function() {
+        $location.path('/groups/');
+    }
+
+    $scope.saveStudents = function() {
+        GroupsService.update($scope.group);
+        $location.path('/groups/');
+    }
+
+
+
+}]);
+

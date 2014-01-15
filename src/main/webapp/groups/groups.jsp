@@ -5,17 +5,19 @@
 <fmt:setBundle basename="message"/>
 
 
-<button id="add-group-button" data-toggle="modal" data-target="#group-form-modal" class="btn btn-primary"><span
-        class="glyphicon glyphicon-plus"></span><fmt:message key="group.add.button.label"/></button>
+<button data-toggle="modal" data-target="#group-form-modal" class="btn btn-primary"><span
+        class="glyphicon glyphicon-plus"></span> <fmt:message key="group.add.button.label"/></button>
 
-<div class="modal fade" id="group-form-modal" tabindex="-1" role="dialog" aria-labelledby="add-user-label"
+<div class="modal fade" id="group-form-modal" tabindex="-1" role="dialog" aria-labelledby="group-form-modal-label"
      aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="add-user-label"><fmt:message
-                        key="user.add.modal.label.add.admin"/></h4>
+                <h4 ng-if="group.groupID != null"  class="modal-title" id="group-form-modal-label"><fmt:message
+                        key="group.add.form.modal.label"/></h4>
+                <h4 ng-if="group.groupID == null"  class="modal-title" id="group-form-modal-label"><fmt:message
+                        key="group.edit.form.modal.label"/></h4>
             </div>
             <div class="modal-body">
                 <form id="group-form">
@@ -27,46 +29,15 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <a ng-click="close()" class="btn btn-default" data-dismiss="modal"><fmt:message
+                <a ng-click="close()" class="btn btn-default" data-dismiss="modal"><span
+                        class="glyphicon glyphicon-remove"></span> <fmt:message
                         key="label.close"/></a>
-                <a ng-if="group.groupID != null" ng-click="updateGroup()" data-toggle="modal" class="btn btn-primary">
-                    <fmt:message key="label.save"/></a>
-                <a ng-if="group.groupID == null" ng-click="createGroup()" data-toggle="modal" class="btn btn-primary">
-                    <fmt:message key="label.save"/></a>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
-
-<div class="modal fade" id="group-students-form-modal" tabindex="-1" role="dialog"
-     aria-labelledby="group-students-label"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="group-students-label"><fmt:message
-                        key="user.add.modal.label.add.admin"/></h4>
-            </div>
-            <div class="modal-body">
-                <table id="group-students-table" class="table table-striped tablesorter">
-                    <thead>
-                    <tr>
-                        <th scope="col"><fmt:message key="user.col.list.label.firstName"/></th>
-                        <th scope="col"><fmt:message key="user.col.list.label.secName"/></th>
-                        <th scope="col"><fmt:message key="label.delete"/></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-
-            </div>
-            <div class="modal-footer">
-
+                <a ng-if="group.groupID != null" ng-click="updateGroup()" data-toggle="modal"
+                   class="btn btn-primary"><span
+                        class="glyphicon glyphicon-floppy-diske"></span> <fmt:message key="label.save"/></a>
+                <a ng-if="group.groupID == null" ng-click="createGroup()" data-toggle="modal"
+                   class="btn btn-primary"><span
+                        class="glyphicon glyphicon-floppy-disk"></span> <fmt:message key="label.save"/></a>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -88,8 +59,8 @@
     <tr ng-repeat="group in groups">
         <td>{{group.name}}</td>
         <td>
-            <%--<a id="show-students-group-button" href="{{:groupID}}" class="butonik btn btn-primary btn-xs"><span--%>
-                    <%--class="glyphicon glyphicon-list"></span></a>--%>
+            <a ng-click="showStudents(group.groupID)" class="butonik btn btn-primary btn-xs"><span
+                    class="glyphicon glyphicon-list"></span></a>
         </td>
         <td>
             <a ng-click="editGroup(group.groupID)" data-toggle="modal"
@@ -100,33 +71,3 @@
     </tbody>
 </table>
 
-<script id="list-group-template" type="text/x-jsrender">
-            <tr>
-                <td>{{group.name}}</td>
-                <td>
-                    <a id="show-students-group-button" href="{{:groupID}}" class="butonik btn btn-primary btn-xs"><span class="glyphicon glyphicon-list"></span></a>
-                </td>
-                <td>
-                    <button onclick="editGroupButtonClick('{{:name}}')" data-toggle="modal"
-                            data-target="#group-form-modal" class="butonik btn btn-primary btn-xs"><span
-                            class="glyphicon glyphicon-pencil"></span></button>
-                </td>
-            </tr>
-
-
-</script>
-
-<script id="group-students-template" type="text/x-jsrender">
-            <tr>
-                <td>{{:firstName}}</td>
-                <td>{{:secName}}</td>
-                <td>
-                    <button  data-toggle="modal"
-                            data-target="#group-form-modal" class="butonik btn btn-primary btn-xs"><span
-                            class="glyphicon glyphicon-pencil"></span></button>
-                </td>
-
-            </tr>
-
-
-</script>
