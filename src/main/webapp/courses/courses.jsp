@@ -54,9 +54,9 @@
     <tr ng-repeat="course in courses">
         <td>{{course.name}}</td>
         <td>
-            <%--<button onclick="editButtonClick('{{:name}}')" data-toggle="modal" data-target="#course-form-modal"--%>
-            <%--class="butonik btn btn-primary btn-xs"><span class="glyphicon glyphicon-list"></span>--%>
-            <%--</button>--%>
+            <a ng-click="showLecturers(course.courseID)" class="btn btn-primary btn-xs"><span
+                    class="glyphicon glyphicon-list"></span>
+            </a>
         </td>
         <td>
             <a ng-click="editCourse(course.courseID)" data-toggle="modal"

@@ -5,16 +5,16 @@
 <fmt:setBundle basename="message"/>
 
 
-<button ng-click="showStudents()" data-toggle="modal" data-target="#add-student-group-modal"
+<button ng-click="showLecturers()" data-toggle="modal" data-target="#add-lecture-course-modal"
         class="btn btn-primary"><span
         class="glyphicon glyphicon-plus"></span> <fmt:message key="group.students.add.button.label"/></button>
-<a ng-click="saveStudents()" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> <fmt:message
+<a ng-click="saveLecturers()" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> <fmt:message
         key="label.save"/></a>
 <a ng-click="back()" class="btn btn-primary"><span class="glyphicon glyphicon-ban-circle"></span> <fmt:message
         key="label.cancel"/></a>
 
 
-<div class="modal fade" id="add-student-group-modal" tabindex="-1" role="dialog"
+<div class="modal fade" id="add-lecture-course-modal" tabindex="-1" role="dialog"
      aria-labelledby="group-students-modal-label"
      aria-hidden="true">
     <div class="modal-dialog">
@@ -34,11 +34,11 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="student in students">
-                        <td>{{student.firstName}}</td>
-                        <td>{{student.secName}}</td>
+                    <tr ng-repeat="lecture in lecturers">
+                        <td>{{lecture.firstName}}</td>
+                        <td>{{lecture.secName}}</td>
                         <td>
-                            <a ng-click="addStudent($index)" class="btn btn-primary btn-xs"><span
+                            <a ng-click="addLecture($index)" class="btn btn-primary btn-xs"><span
                                     class="glyphicon glyphicon-plus"></span></a>
                         </td>
                     </tr>
@@ -67,11 +67,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="gstudent in group.students">
-        <td>{{gstudent.firstName}}</td>
-        <td>{{gstudent.secName}}</td>
+    <tr ng-repeat="glecturer in course.lecturers">
+        <td>{{glecturer.firstName}}</td>
+        <td>{{glecturer.secName}}</td>
         <td>
-            <a ng-click="deleteStudent($index)" class="btn btn-primary btn-xs"><span
+            <a ng-click="deleteLecture($index)" class="btn btn-primary btn-xs"><span
                     class="glyphicon glyphicon-trash"></span></a>
         </td>
     </tr>

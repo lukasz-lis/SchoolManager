@@ -36,3 +36,8 @@ kujonServices.factory('CoursesService', ['$resource', function($resource) {
         get: {method: 'GET', isArray: false, params: {id: '@id'}}
     });
 }]);
+kujonServices.factory('LecturersService', ['$resource', function($resource) {
+    return $resource('api/users/lecturers', {}, {
+        query: {method: 'GET', isArray: true}
+    });
+}]);

@@ -76,22 +76,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="42" selection-start="3304" selection-end="3304" vertical-scroll-proportion="-13.115385" vertical-offset="883" max-vertical-offset="2159">
+            <state line="42" column="4" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="816">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserResource.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/user/resource/UserResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="5" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
               <folding>
-                <marker date="1389735054112" expanded="true" signature="1245:1497" placeholder="..." />
-                <marker date="1389735054112" expanded="true" signature="1338:1366" placeholder="..." />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/services.js">
+      <file leaf-file-name="StudentResource.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/student/resource/StudentResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="38" selection-start="468" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+            <state line="38" column="0" selection-start="1005" selection-end="1151" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1156">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
               <folding />
             </state>
           </provider>
@@ -100,16 +117,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="24" selection-start="5108" selection-end="5108" vertical-scroll-proportion="0.0" vertical-offset="2488" max-vertical-offset="3315">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="33" selection-start="1180" selection-end="1194" vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="884">
+            <state line="198" column="19" selection-start="5691" selection-end="5704" vertical-scroll-proportion="0.0" vertical-offset="3028" max-vertical-offset="3910">
               <folding />
             </state>
           </provider>
@@ -118,16 +126,16 @@
       <file leaf-file-name="courses.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/courses/courses.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="50" selection-start="1669" selection-end="1700" vertical-scroll-proportion="-18.307692" vertical-offset="51" max-vertical-offset="1241">
+            <state line="56" column="39" selection-start="2611" selection-end="2611" vertical-scroll-proportion="-14.461538" vertical-offset="576" max-vertical-offset="1241">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseResource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/course/resource/CourseResource.java">
+      <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="41" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+            <state line="45" column="48" selection-start="1599" selection-end="1618" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="952">
               <folding />
             </state>
           </provider>
@@ -136,34 +144,25 @@
       <file leaf-file-name="groups.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/groups/groups.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="49" selection-start="409" selection-end="409" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1343">
+            <state line="8" column="49" selection-start="409" selection-end="409" vertical-scroll-proportion="18.307692" vertical-offset="612" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="group-students.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="group-students.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/groups/group-students.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="52" selection-start="2038" selection-end="2038" vertical-scroll-proportion="0.43458647" vertical-offset="357" max-vertical-offset="1445">
+            <state line="27" column="49" selection-start="1431" selection-end="1431" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="1445">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/message.properties">
+      <file leaf-file-name="course-lecturers.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/courses/course-lecturers.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="39" selection-start="1830" selection-end="1830" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1530">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users-list.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/users/users-list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="42" selection-start="2074" selection-end="2104" vertical-scroll-proportion="-17.076923" vertical-offset="168" max-vertical-offset="884">
+            <state line="7" column="31" selection-start="301" selection-end="301" vertical-scroll-proportion="0.17894737" vertical-offset="0" max-vertical-offset="1445">
               <folding />
             </state>
           </provider>
@@ -179,9 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/politechnika/model/Care.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/politechnika/model/Lecturer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/politechnika/model/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/politechnika/model/Course.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/politechnika/model/Office.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/users/add.jsp" />
@@ -221,15 +217,18 @@
         <option value="$PROJECT_DIR$/src/main/webapp/asset/js/models.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/asset/js/main.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/asset/js/functions.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/asset/js/services.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/politechnika/course/resource/CourseResource.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/courses/courses.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/asset/js/routes.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/asset/js/controllers.js" />
         <option value="$PROJECT_DIR$/src/main/resources/message.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/groups/groups.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/groups/group-students.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/courses/course-lecutrers.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/asset/js/routes.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/politechnika/user/resource/UserResource.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/asset/js/services.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/asset/js/controllers.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/courses/courses.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/courses/course-lecturers.jsp" />
       </list>
     </option>
   </component>
@@ -522,6 +521,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1138,12 +1189,12 @@
       <workItem from="1389525241993" duration="149000" />
       <workItem from="1389525716559" duration="11297000" />
       <workItem from="1389634310361" duration="12472000" />
-      <workItem from="1389732108791" duration="9780000" />
+      <workItem from="1389732108791" duration="11953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114769000" />
+    <option name="totallyTimeSpent" value="116942000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1262,11 +1313,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1173" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="17" selection-start="629" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2363">
@@ -1427,11 +1473,6 @@
         <state line="17" column="0" selection-start="340" selection-end="340" vertical-scroll-proportion="0.40545145" vertical-offset="0" max-vertical-offset="587" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/student/resource/StudentResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="40" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1513" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/glassfish-web.xml">
       <provider editor-type-id="com.intellij.javaee.oss.glassfish.editor.GlassfishWebRootProvider">
         <state />
@@ -1516,13 +1557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/user/resource/UserResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1156">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/models.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="13" selection-end="13" vertical-scroll-proportion="0.057724956" vertical-offset="0" max-vertical-offset="589">
@@ -1533,13 +1567,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/users/users-create.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1292">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.20203735" vertical-offset="0" max-vertical-offset="589">
           <folding />
         </state>
       </provider>
@@ -1572,34 +1599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="33" selection-start="1180" selection-end="1194" vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/courses/courses.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="50" selection-start="1669" selection-end="1700" vertical-scroll-proportion="-18.307692" vertical-offset="51" max-vertical-offset="1241">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="38" selection-start="468" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="24" selection-start="5108" selection-end="5108" vertical-scroll-proportion="0.0" vertical-offset="2488" max-vertical-offset="3315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/users/users-list.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="42" selection-start="2074" selection-end="2104" vertical-scroll-proportion="-17.076923" vertical-offset="168" max-vertical-offset="884">
@@ -1611,16 +1610,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="42" selection-start="3304" selection-end="3304" vertical-scroll-proportion="-13.115385" vertical-offset="883" max-vertical-offset="2159">
           <folding>
-            <marker date="1389735054112" expanded="true" signature="1245:1497" placeholder="..." />
-            <marker date="1389735054112" expanded="true" signature="1338:1366" placeholder="..." />
+            <marker date="1389735054112" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1389735054112" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/groups/groups.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="49" selection-start="409" selection-end="409" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1343">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1633,7 +1625,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/groups/group-students.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="52" selection-start="2038" selection-end="2038" vertical-scroll-proportion="0.43458647" vertical-offset="357" max-vertical-offset="1445">
+        <state line="27" column="49" selection-start="1431" selection-end="1431" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="48" selection-start="1599" selection-end="1618" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/courses/courses.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="39" selection-start="2611" selection-end="2611" vertical-scroll-proportion="-14.461538" vertical-offset="576" max-vertical-offset="1241">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/groups/groups.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="49" selection-start="409" selection-end="409" vertical-scroll-proportion="18.307692" vertical-offset="612" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/user/resource/UserResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="5" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/student/resource/StudentResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1005" selection-end="1151" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1156">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="4" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="198" column="19" selection-start="5691" selection-end="5704" vertical-scroll-proportion="0.0" vertical-offset="3028" max-vertical-offset="3910">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/courses/course-lecturers.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="31" selection-start="301" selection-end="301" vertical-scroll-proportion="0.17894737" vertical-offset="0" max-vertical-offset="1445">
           <folding />
         </state>
       </provider>

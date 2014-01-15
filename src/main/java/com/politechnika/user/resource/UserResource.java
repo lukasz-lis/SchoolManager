@@ -4,20 +4,17 @@
  */
 package com.politechnika.user.resource;
 
+import com.politechnika.model.Student;
 import com.politechnika.model.User;
 import com.politechnika.security.MongoDBRealm;
 import com.politechnika.user.dao.UserDAO;
-import java.util.List;
-import javax.ejb.EJB;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 import org.apache.log4j.Logger;
+import org.mongodb.morphia.query.Query;
+
+import javax.ejb.EJB;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 /**
  *
@@ -34,6 +31,14 @@ public class UserResource {
     @Produces(MediaType.APPLICATION_JSON)
     public List<User> getAll() {
         return userDAO.find().asList();
+    }
+
+    @GET
+    @Path("/lecturers")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<User> getAllLecturers() {
+        Query<User> query = userDAO.createQuery().filter("role", MongoDBRealm.LECTURER_ROLE);
+        return userDAO.find(query).asList();
     }
 
     @POST

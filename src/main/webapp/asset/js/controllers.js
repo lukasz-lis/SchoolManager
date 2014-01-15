@@ -154,6 +154,12 @@ kujonControllers.controller('CourseCtrl', ['$scope', '$routeParams', '$location'
         $scope.course = {};
         console.log($scope.course);
     };
+
+    $scope.showLecturers = function (courseID) {
+        $location.path('/course-lecturers/' + courseID);
+    };
+
+
     $scope.courses = CoursesService.query();
 
 }]);
@@ -181,6 +187,35 @@ kujonControllers.controller('GroupStudentsCtrl', ['$scope', '$routeParams', '$lo
     $scope.saveStudents = function() {
         GroupsService.update($scope.group);
         $location.path('/groups/');
+    }
+
+
+
+}]);
+kujonControllers.controller('CourseLecturersCtrl', ['$scope', '$routeParams', '$location', 'CoursesService', 'LecturersService', function ($scope, $routeParams, $location, CoursesService, LecturersService) {
+
+    $scope.course = CoursesService.get({id: $routeParams.id});
+
+    $scope.showLecturers = function () {
+        $scope.lecturers = LecturersService.query();
+    }
+
+    $scope.addLecture = function (index) {
+        $scope.course.lecturers.push($scope.lecturers[index]);
+        $scope.lecturers.splice(index, 1);
+    }
+
+    $scope.deleteLecture = function(index) {
+        $scope.course.lecturers.splice(index, 1);
+    }
+
+    $scope.back = function() {
+        $location.path('/courses/');
+    }
+
+    $scope.saveLecturers = function() {
+        CoursesService.update($scope.course);
+        $location.path('/courses/');
     }
 
 

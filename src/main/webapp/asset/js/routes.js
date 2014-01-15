@@ -41,6 +41,10 @@ kujon.config(['$routeProvider',
                 templateUrl: 'courses/courses.jsp',
                 controller: 'CourseCtrl'
             }).
+            when('/course-lecturers/:id', {
+                templateUrl: 'courses/course-lecturers.jsp',
+                controller: 'CourseLecturersCtrl'
+            }).
             otherwise({
                 redirectTo: '/'
             });
