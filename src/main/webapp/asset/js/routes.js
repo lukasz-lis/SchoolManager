@@ -29,6 +29,14 @@ kujon.config(['$routeProvider',
                 templateUrl: 'main.jsp',
                 controller: 'AddOrderController'
             }).
+            when('/groups', {
+                templateUrl: 'groups/groups.jsp',
+                controller: 'GroupCtrl'
+            }).
+            when('/courses', {
+                templateUrl: 'courses/courses.jsp',
+                controller: 'CourseCtrl'
+            }).
             otherwise({
                 redirectTo: '/'
             });

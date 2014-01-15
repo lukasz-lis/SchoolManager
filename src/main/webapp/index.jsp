@@ -69,8 +69,8 @@
                     <li><a href="#about"><fmt:message key="navi.label.reports"/></a></li>
                     <li><a href="#contact"><fmt:message key="navi.label.stats"/></a></li>
                     <li><a href="#/users"><fmt:message key="navi.label.users"/></a></li>
-                    <li><a href="group"><fmt:message key="navi.label.groups"/></a></li>
-                    <li><a href="course"><fmt:message key="navi.label.courses"/></a></li>
+                    <li><a href="#/groups"><fmt:message key="navi.label.groups"/></a></li>
+                    <li><a href="#/courses"><fmt:message key="navi.label.courses"/></a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">

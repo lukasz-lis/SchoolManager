@@ -43,9 +43,9 @@ public class CourseResource {
     }
     
     @GET
-    @Path("{name}")
+    @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Course findByGroupName(@PathParam("name") String name) {
-        return courseDAO.findOne("name", name);
+    public Course findByGroupName(@PathParam("id") String id) {
+        return courseDAO.findOne("courseID", id);
     }
 }

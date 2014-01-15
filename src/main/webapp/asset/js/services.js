@@ -20,3 +20,19 @@ kujonServices.factory('StudentsService', ['$resource', function($resource) {
             get: {method: 'GET', isArray: false, params: {id: '@id'}}                           
         });
 }]);
+kujonServices.factory('GroupsService', ['$resource', function($resource) {
+    return $resource('api/groups/:id', {}, {
+        query: {method: 'GET', isArray: true},
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        get: {method: 'GET', isArray: false, params: {id: '@id'}}
+    });
+}]);
+kujonServices.factory('CoursesService', ['$resource', function($resource) {
+    return $resource('api/courses/:id', {}, {
+        query: {method: 'GET', isArray: true},
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        get: {method: 'GET', isArray: false, params: {id: '@id'}}
+    });
+}]);
