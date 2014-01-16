@@ -13,30 +13,25 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.mongodb.morphia.Datastore;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 
 import org.apache.shiro.util.SimpleByteSource;
 
-
 /**
- * Created with IntelliJ IDEA.
- * User: Łukasz
- * Date: 23.11.13
- * Time: 20:54
- * To change this template use File | Settings | File Templates.
+ * Created with IntelliJ IDEA. User: Łukasz Date: 23.11.13 Time: 20:54 To change
+ * this template use File | Settings | File Templates.
  */
-
-
 public class MongoDBRealm extends AuthorizingRealm implements Serializable {
 
     public static final String ADMIN_ROLE = "ADMIN";
     public static final String STUDENT_ROLE = "STUDENT";
     public static final String LECTURER_ROLE = "LECTURER";
-    public  static final String CARE_ROLE = "CARE";
+    public static final String CARE_ROLE = "CARE";
     public static final String OFFICE_ROLE = "OFFICE";
-
     private Logger LOG;
     private Datastore ds;
-
 
     public MongoDBRealm() {
         LOG = Logger.getLogger(MongoDBRealm.class);
@@ -45,21 +40,27 @@ public class MongoDBRealm extends AuthorizingRealm implements Serializable {
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        LOG.debug("Wchodze do pustej metody");
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }
+        String username = (String) principalCollection.getPrimaryPrincipal();
+        LOG.debug("Imie uæytkownika" + username);
 
+        User user = ds.find(User.class, "username", username).get();
+
+        final Set<String> roles = new HashSet<String>();
+        roles.add(user.getRole());
+
+        return new SimpleAuthorizationInfo(roles);  //To change body of implemented methods use File | Settings | File Templates.
+    }
 
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
-        LOG.debug("Wchodze do dobrej metody");
+
         UsernamePasswordToken upToken = (UsernamePasswordToken) authenticationToken;
 
         if (upToken.getUsername() == null) {
-            LOG.debug("Użytkownik pusty nie mam jak znaleść");
+  
             throw new AuthenticationException("Username is null");
         }
-        LOG.debug("Haslo usera z formularza" + upToken.getPassword());
+
 
         return findPassowrdByUsername(upToken.getUsername());
     }
@@ -67,11 +68,9 @@ public class MongoDBRealm extends AuthorizingRealm implements Serializable {
     private SimpleAuthenticationInfo findPassowrdByUsername(String username) {
 
         User user = ds.find(User.class, "username", username).get();
-        if (user == null) {
-            LOG.debug("Nie znalazłem użytkownika");
+        if (user == null) {           
             throw new UnknownAccountException("Unknown user " + username);
-        }
-        LOG.debug("Hasło usera z bazy" + user.getPassword());
+        }      
         SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(username, user.getPassword(), getName());
         info.setCredentialsSalt(new SimpleByteSource(user.getSalt()));
         return info;
@@ -88,7 +87,7 @@ public class MongoDBRealm extends AuthorizingRealm implements Serializable {
     }
 
     public static User createUserAuthorization(User user) {
-        user = (User)createAuthorization(user);
+        user = (User) createAuthorization(user);
         return user;
     }
 
@@ -96,5 +95,4 @@ public class MongoDBRealm extends AuthorizingRealm implements Serializable {
         student = (Student) createAuthorization(student);
         return student;
     }
-
 }

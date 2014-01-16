@@ -19,7 +19,7 @@ import org.mongodb.morphia.annotations.Reference;
 public class Lection {
 
     private String lectionID = new ObjectId().toString();
-    private String title;
+    private String subject;
     private String description;
 
     @Reference
@@ -70,11 +70,11 @@ public class Lection {
     }
 
     public String getTitle() {
-        return title;
+        return subject;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.subject = title;
     }
     
 }
