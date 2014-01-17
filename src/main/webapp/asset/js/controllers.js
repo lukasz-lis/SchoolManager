@@ -222,5 +222,20 @@ kujonControllers.controller('LectionCtrl', ['$scope', '$routeParams', '$location
 
     $scope.lections = LectionsService.query();
 
+    $scope.newLection = function() {
+        $location.path('/lection-presence/');
+    }
+
 }]);
+kujonControllers.controller('LectionPesenceCtrl', ['$scope', '$routeParams', '$location', 'LectionsService', 'CoursesService', 'GroupsService', function ($scope, $routeParams, $location, LectionsService, CoursesService, GroupsService) {
+
+    $scope.groups = GroupsService.query();
+    $scope.courses = CoursesService.query();
+
+    $scope.seeWhatIsChoose = function() {
+        console.log($scope.lection);
+    }
+
+}]);
+
 

@@ -76,66 +76,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/services.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="4" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="816">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserResource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/user/resource/UserResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="5" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentResource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/student/resource/StudentResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1005" selection-end="1151" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1156">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="19" selection-start="5691" selection-end="5704" vertical-scroll-proportion="0.0" vertical-offset="3028" max-vertical-offset="3910">
+            <state line="231" column="42" selection-start="6836" selection-end="6836" vertical-scroll-proportion="0.0" vertical-offset="3503" max-vertical-offset="4199">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courses.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/courses/courses.jsp">
+      <file leaf-file-name="lections.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/lections/lections.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="39" selection-start="2611" selection-end="2611" vertical-scroll-proportion="-14.461538" vertical-offset="576" max-vertical-offset="1241">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="48" selection-start="1599" selection-end="1618" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="952">
+            <state line="6" column="16" selection-start="269" selection-end="432" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="629">
               <folding />
             </state>
           </provider>
@@ -144,25 +97,80 @@
       <file leaf-file-name="groups.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/groups/groups.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="49" selection-start="409" selection-end="409" vertical-scroll-proportion="18.307692" vertical-offset="612" max-vertical-offset="1343">
+            <state line="23" column="26" selection-start="1285" selection-end="1640" vertical-scroll-proportion="-13.076923" vertical-offset="51" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="group-students.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/groups/group-students.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="49" selection-start="1431" selection-end="1431" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="1445">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="course-lecturers.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="course-lecturers.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/courses/course-lecturers.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="31" selection-start="301" selection-end="301" vertical-scroll-proportion="0.17894737" vertical-offset="0" max-vertical-offset="1445">
+            <state line="56" column="6" selection-start="2688" selection-end="2688" vertical-scroll-proportion="-30.73077" vertical-offset="153" max-vertical-offset="1445">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="41" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1071">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lection-presence.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/lections/lection-presence.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="11" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.6891892" vertical-offset="459" max-vertical-offset="1207">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/message.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="79" column="40" selection-start="2531" selection-end="2531" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1683">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Presence.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/Presence.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="5" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="799">
+              <folding>
+                <element signature="e#1136#1137#0" expanded="true" />
+                <element signature="e#1166#1167#0" expanded="true" />
+                <element signature="e#1213#1214#0" expanded="true" />
+                <element signature="e#1251#1252#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lection.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/Lection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="26" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1139">
+              <folding>
+                <element signature="e#777#778#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#904#905#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users-list.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/users/users-list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="0" selection-start="1264" selection-end="2632" vertical-scroll-proportion="-4.6538463" vertical-offset="168" max-vertical-offset="884">
               <folding />
             </state>
           </provider>
@@ -178,10 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/politechnika/model/Course.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/politechnika/model/Office.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/users/add.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/users/users.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/users/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/politechnika/user/controller/UserController.java" />
@@ -219,16 +223,20 @@
         <option value="$PROJECT_DIR$/src/main/webapp/asset/js/functions.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/politechnika/course/resource/CourseResource.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/message.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/groups/groups.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/groups/group-students.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/courses/course-lecutrers.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/asset/js/routes.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/politechnika/user/resource/UserResource.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/asset/js/services.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/asset/js/controllers.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/courses/courses.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/courses/course-lecturers.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/asset/js/routes.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/lections/lections.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/asset/js/controllers.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/lections/lection-presence.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/message.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/politechnika/model/Presence.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/politechnika/model/Lection.java" />
       </list>
     </option>
   </component>
@@ -276,7 +284,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -304,8 +312,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -369,6 +377,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lections" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -546,33 +580,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SchoolManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SchoolManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -622,7 +630,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="last_opened_file_path" value="F:/SchoolManager" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
-    <property name="options.lastSelected" value="preferences.applicationServers" />
+    <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -866,17 +874,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="" />
       <option name="IOSSimulatorSdkPath" value="" />
@@ -910,6 +907,17 @@
       <option name="screenWidth" value="0" />
       <option name="url" value="http://" />
       <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -1007,9 +1015,6 @@
         </option>
       </method>
     </configuration>
-    <configuration default="true" type="google-app-engine-deploy" factoryName="Google App Engine Deployment">
-      <method />
-    </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
       <option name="BCName" value="" />
       <option name="launcherParameters">
@@ -1022,6 +1027,9 @@
       </option>
       <option name="moduleName" value="" />
       <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="google-app-engine-deploy" factoryName="Google App Engine Deployment">
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -1190,11 +1198,12 @@
       <workItem from="1389525716559" duration="11297000" />
       <workItem from="1389634310361" duration="12472000" />
       <workItem from="1389732108791" duration="11953000" />
+      <workItem from="1389990781416" duration="6662000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116942000" />
+    <option name="totallyTimeSpent" value="123604000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1218,7 +1227,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-440" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1234,11 +1243,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3245098" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20447284" sideWeight="0.6385069" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29705882" sideWeight="0.85942495" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29607844" sideWeight="0.85942495" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32647058" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3970588" sideWeight="0.7593184" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32647058" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1252,20 +1262,19 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.14057508" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67092335" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1286,9 +1295,9 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24934107" sideWeight="0.27996072" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="EJB" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.27996072" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="EJB" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.27996072" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1313,51 +1322,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="17" selection-start="629" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2363">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="3" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1071">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#535#536#0" expanded="false" />
-            <element signature="e#562#563#0" expanded="false" />
-            <element signature="e#600#601#0" expanded="false" />
-            <element signature="e#632#633#0" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-            <element signature="e#728#729#0" expanded="false" />
-            <element signature="e#758#759#0" expanded="false" />
-            <element signature="e#794#795#0" expanded="false" />
-            <element signature="e#825#826#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#914#915#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="326" selection-end="1422" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/shiro.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="23" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="614" column="0" selection-start="24932" selection-end="24932" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="743" column="0" selection-start="27685" selection-end="27685" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="0" />
@@ -1384,9 +1348,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/PhoneE.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <folding />
-        </state>
+        <state line="13" column="13" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/ScheduleE.java">
@@ -1405,9 +1367,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/Payment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="517" selection-end="517" vertical-scroll-proportion="0.27728984" vertical-offset="0" max-vertical-offset="1241">
-          <folding />
-        </state>
+        <state line="20" column="22" selection-start="517" selection-end="517" vertical-scroll-proportion="0.27728984" vertical-offset="0" max-vertical-offset="1241" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/CoursePayment.java">
@@ -1435,30 +1395,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="40" selection-start="2370" selection-end="2370" vertical-scroll-proportion="-6.012346" vertical-offset="261" max-vertical-offset="1173" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="5" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1105">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#850#851#0" expanded="false" />
-            <element signature="e#877#878#0" expanded="false" />
-            <element signature="e#917#918#0" expanded="false" />
-            <element signature="e#949#950#0" expanded="false" />
-            <element signature="e#991#992#0" expanded="false" />
-            <element signature="e#1022#1023#0" expanded="false" />
-            <element signature="e#1077#1078#0" expanded="false" />
-            <element signature="e#1117#1118#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="false" />
-            <element signature="e#1243#1244#0" expanded="false" />
-            <element signature="e#1283#1284#0" expanded="false" />
-            <element signature="e#1309#1310#0" expanded="false" />
-            <element signature="e#1333#1334#0" expanded="false" />
-            <element signature="e#1365#1366#0" expanded="false" />
-            <element signature="e#1391#1392#0" expanded="false" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/security/MongoDBRealm.java">
@@ -1512,9 +1448,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/vendor/ng-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/vendor/angular/angular.js">
@@ -1559,9 +1493,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/models.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="13" selection-end="13" vertical-scroll-proportion="0.057724956" vertical-offset="0" max-vertical-offset="589">
-          <folding />
-        </state>
+        <state line="4" column="0" selection-start="13" selection-end="13" vertical-scroll-proportion="0.057724956" vertical-offset="0" max-vertical-offset="589" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/users/users-create.jsp">
@@ -1573,23 +1505,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="11" selection-start="843" selection-end="843" vertical-scroll-proportion="0.31748727" vertical-offset="136" max-vertical-offset="3128">
-          <folding />
-        </state>
+        <state line="19" column="11" selection-start="843" selection-end="843" vertical-scroll-proportion="0.31748727" vertical-offset="136" max-vertical-offset="3128" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="9" selection-start="0" selection-end="2314" vertical-scroll-proportion="0.41086587" vertical-offset="387" max-vertical-offset="1241">
-          <folding />
-        </state>
+        <state line="37" column="9" selection-start="0" selection-end="2314" vertical-scroll-proportion="0.41086587" vertical-offset="387" max-vertical-offset="1241" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/users/users-details.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.27175844" vertical-offset="153" max-vertical-offset="986">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.27175844" vertical-offset="153" max-vertical-offset="986" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/course/resource/CourseResource.java">
@@ -1599,54 +1525,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/users/users-list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="42" selection-start="2074" selection-end="2104" vertical-scroll-proportion="-17.076923" vertical-offset="168" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="42" selection-start="3304" selection-end="3304" vertical-scroll-proportion="-13.115385" vertical-offset="883" max-vertical-offset="2159">
-          <folding>
-            <marker date="1389735054112" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1389735054112" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/message.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="39" selection-start="1830" selection-end="1830" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/groups/group-students.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="49" selection-start="1431" selection-end="1431" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="1445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="48" selection-start="1599" selection-end="1618" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="952">
+        <state line="27" column="49" selection-start="1431" selection-end="1431" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1445">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/courses/courses.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="39" selection-start="2611" selection-end="2611" vertical-scroll-proportion="-14.461538" vertical-offset="576" max-vertical-offset="1241">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/groups/groups.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="49" selection-start="409" selection-end="409" vertical-scroll-proportion="18.307692" vertical-offset="612" max-vertical-offset="1343">
+        <state line="56" column="39" selection-start="2611" selection-end="2611" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1241">
           <folding />
         </state>
       </provider>
@@ -1654,9 +1549,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/user/resource/UserResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="5" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1681,16 +1574,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/Course.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="19" selection-start="5691" selection-end="5704" vertical-scroll-proportion="0.0" vertical-offset="3028" max-vertical-offset="3910">
+        <state line="32" column="5" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/groups/groups.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="26" selection-start="1285" selection-end="1640" vertical-scroll-proportion="-13.076923" vertical-offset="51" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="41" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/lections/lections.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="16" selection-start="269" selection-end="432" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="629">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/courses/course-lecturers.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="31" selection-start="301" selection-end="301" vertical-scroll-proportion="0.17894737" vertical-offset="0" max-vertical-offset="1445">
+        <state line="56" column="6" selection-start="2688" selection-end="2688" vertical-scroll-proportion="-30.73077" vertical-offset="153" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="231" column="42" selection-start="6836" selection-end="6836" vertical-scroll-proportion="0.0" vertical-offset="3503" max-vertical-offset="4199">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/users/users-list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="1264" selection-end="2632" vertical-scroll-proportion="-4.6538463" vertical-offset="168" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="5" selection-start="950" selection-end="950" vertical-scroll-proportion="0.48410404" vertical-offset="175" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/message.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="40" selection-start="2531" selection-end="2531" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/Presence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="5" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="799">
+          <folding>
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#1251#1252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/politechnika/model/Lection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="26" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1139">
+          <folding>
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/lections/lection-presence.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="11" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.6891892" vertical-offset="459" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>

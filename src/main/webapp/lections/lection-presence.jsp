@@ -4,70 +4,56 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <fmt:setBundle basename="message"/>
 
-
-<button ng-click="showStudents()" data-toggle="modal" data-target="#add-student-group-modal"
-        class="btn btn-primary"><span
-        class="glyphicon glyphicon-plus"></span> <fmt:message key="group.students.add.button.label"/></button>
-<a ng-click="saveStudents()" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> <fmt:message
-        key="label.save"/></a>
-<a ng-click="back()" class="btn btn-primary"><span class="glyphicon glyphicon-ban-circle"></span> <fmt:message
-        key="label.cancel"/></a>
-
-
-<div class="modal fade" id="add-student-group-modal" tabindex="-1" role="dialog"
-     aria-labelledby="group-students-modal-label"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="group-students-modal-label"><fmt:message
-                        key="group.students.add.modal.label"/></h4>
-            </div>
-            <div class="modal-body">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th scope="col"><fmt:message key="user.col.list.label.firstName"/></th>
-                        <th scope="col"><fmt:message key="user.col.list.label.secName"/></th>
-                        <th scope="col"><fmt:message key="label.add"/></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="student in students">
-                        <td>{{student.firstName}}</td>
-                        <td>{{student.secName}}</td>
-                        <td>
-                            <a ng-click="addStudent($index)" class="btn btn-primary btn-xs"><span
-                                    class="glyphicon glyphicon-plus"></span></a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-
-            </div>
-            <div class="modal-footer">
-                <a ng-click="close()" class="btn btn-default" data-dismiss="modal"><span
-                        class="glyphicon glyphicon-remove"></span> <fmt:message key="label.close"/></a>
+<form>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group ">
+                <label class="control-label" for="subject"><fmt:message key="lection.form.label.subject"/></label>
+                <input type="text" class="form-control" ng-model="lection.subject" name="subject"
+                       placeholder='<fmt:message key="lection.form.label.subject"/>'>
             </div>
         </div>
-        <!-- /.modal-content -->
+        <div class="col-md-4">
+            <div class="form-group ">
+                <label class="control-label" for="course"><fmt:message key="lection.form.label.course"/></label>
+                <select ng-model="lection.course" id="course" class="form-control"
+                        ng-options="course as course.name for course in courses">
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group ">
+                <label class="control-label" for="group"><fmt:message key="lection.form.label.groupe"/></label>
+                <select ng-model="lection.group" id="group" class="form-control" ng-options="group as group.name for group in groups">
+                </select>
+            </div>
+        </div>
     </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group ">
+                <label class="control-label" for="description"><fmt:message
+                        key="lection.form.label.description"/></label>
+                <textarea rows="3" class="form-control" ng-model="lection.description" name="description"
+                          placeholder='<fmt:message key="lection.form.label.description"/>'></textarea>
+            </div>
+        </div>
+    </div>
+</form>
 
+<a ng-click="seeWhatIsChoose()" class="butonik btn btn-primary"><span
+        class="glyphicon glyphicon-plus"></span> <fmt:message key="lection.add.button.label"/></a>
 
 <table class="table table-striped tablesorter">
     <thead>
     <tr>
         <th scope="col"><fmt:message key="user.col.list.label.firstName"/></th>
         <th scope="col"><fmt:message key="user.col.list.label.secName"/></th>
-        <th scope="col"><fmt:message key="label.delete"/></th>
+        <th scope="col"><fmt:message key="lection.col.list.label.presence"/></th>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="gstudent in group.students">
+    <tr ng-repeat="gstudent in lection.group.students">
         <td>{{gstudent.firstName}}</td>
         <td>{{gstudent.secName}}</td>
         <td>

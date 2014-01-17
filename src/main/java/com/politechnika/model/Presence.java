@@ -4,24 +4,26 @@
  */
 package com.politechnika.model;
 
-import java.util.Date;
-import javax.xml.bind.annotation.XmlRootElement;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 import org.mongodb.morphia.annotations.Reference;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Date;
+
 /**
- *
  * @author l.lis
  */
 @XmlRootElement
 @Entity
 public class Presence {
-    
+
     @Id
     private String presenceID = new ObjectId().toString();
-    private Date day;
+
+    @Reference
+    private Lection lection;
     @Reference
     private Student student;
     Boolean presened;
@@ -32,14 +34,6 @@ public class Presence {
 
     public void setPresenceID(String presenceID) {
         this.presenceID = presenceID;
-    }
-
-    public Date getDay() {
-        return day;
-    }
-
-    public void setDay(Date day) {
-        this.day = day;
     }
 
     public Student getStudent() {
@@ -57,6 +51,12 @@ public class Presence {
     public void setPresened(Boolean presened) {
         this.presened = presened;
     }
-    
-    
+
+    public Lection getLection() {
+        return lection;
+    }
+
+    public void setLection(Lection lection) {
+        this.lection = lection;
+    }
 }

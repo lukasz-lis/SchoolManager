@@ -4,7 +4,7 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <fmt:setBundle basename="message"/>
 
-<a ng-click="showStudents(group.groupID)" class="butonik btn btn-primary"><span
+<a ng-click="newLection()" class="butonik btn btn-primary"><span
         class="glyphicon glyphicon-plus"></span> <fmt:message key="lection.add.button.label"/></a>
 
 <table id="list-group-table" class="table table-striped tablesorter">

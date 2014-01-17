@@ -4,15 +4,15 @@
  */
 package com.politechnika.model;
 
-import java.util.List;
-import javax.xml.bind.annotation.XmlRootElement;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 import org.mongodb.morphia.annotations.Reference;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Date;
+
 /**
- *
  * @author l.lis
  */
 @Entity
@@ -23,15 +23,21 @@ public class Lection {
     private String lectionID = new ObjectId().toString();
     private String subject;
     private String description;
-    
+    private Date createDate = new Date();
     @Reference
     private Group group;
     @Reference
     private Course course;
     @Reference
     private User lecturer;
-    @Reference
-    private List<Presence> presence;
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
 
     public String getLectionID() {
         return lectionID;
@@ -65,14 +71,6 @@ public class Lection {
         this.lecturer = lecturer;
     }
 
-    public List<Presence> getPresence() {
-        return presence;
-    }
-
-    public void setPresence(List<Presence> presence) {
-        this.presence = presence;
-    }
-
     public String getTitle() {
         return subject;
     }
@@ -96,5 +94,5 @@ public class Lection {
     public void setGroup(Group group) {
         this.group = group;
     }
-    
+
 }
