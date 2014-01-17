@@ -41,3 +41,11 @@ kujonServices.factory('LecturersService', ['$resource', function($resource) {
         query: {method: 'GET', isArray: true}
     });
 }]);
+kujonServices.factory('LectionsService', ['$resource', function($resource) {
+        return $resource('api/lections/:id', {}, {
+            query: {method: 'GET', isArray: true},
+            create: {method: 'POST'},
+            update: {method: 'PUT'},
+            get: {method: 'GET', isArray: false, params: {id: '@id'}}                           
+        });
+}]);

@@ -217,8 +217,10 @@ kujonControllers.controller('CourseLecturersCtrl', ['$scope', '$routeParams', '$
         CoursesService.update($scope.course);
         $location.path('/courses/');
     }
+}]);
+kujonControllers.controller('LectionCtrl', ['$scope', '$routeParams', '$location', 'LectionsService', function ($scope, $routeParams, $location, LectionsService) {
 
-
+    $scope.lections = LectionsService.query();
 
 }]);
 

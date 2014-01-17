@@ -6,9 +6,9 @@ package com.politechnika.model;
 
 import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.crypto.Data;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
 import org.mongodb.morphia.annotations.Reference;
 
 /**
@@ -19,6 +19,7 @@ import org.mongodb.morphia.annotations.Reference;
 @Entity
 public class Presence {
     
+    @Id
     private String presenceID = new ObjectId().toString();
     private Date day;
     @Reference

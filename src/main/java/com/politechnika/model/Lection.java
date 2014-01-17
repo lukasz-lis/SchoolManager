@@ -8,6 +8,7 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
 import org.mongodb.morphia.annotations.Reference;
 
 /**
@@ -18,10 +19,13 @@ import org.mongodb.morphia.annotations.Reference;
 @XmlRootElement
 public class Lection {
 
+    @Id
     private String lectionID = new ObjectId().toString();
     private String subject;
     private String description;
-
+    
+    @Reference
+    private Group group;
     @Reference
     private Course course;
     @Reference
@@ -75,6 +79,22 @@ public class Lection {
 
     public void setTitle(String title) {
         this.subject = title;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
     }
     
 }
