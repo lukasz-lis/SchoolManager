@@ -176,19 +176,18 @@ kujonControllers.controller('GroupStudentsCtrl', ['$scope', '$routeParams', '$lo
         $scope.students.splice(index, 1);
     }
 
-    $scope.deleteStudent = function(index) {
+    $scope.deleteStudent = function (index) {
         $scope.group.students.splice(index, 1);
     }
 
-    $scope.back = function() {
+    $scope.back = function () {
         $location.path('/groups/');
     }
 
-    $scope.saveStudents = function() {
+    $scope.saveStudents = function () {
         GroupsService.update($scope.group);
         $location.path('/groups/');
     }
-
 
 
 }]);
@@ -205,37 +204,63 @@ kujonControllers.controller('CourseLecturersCtrl', ['$scope', '$routeParams', '$
         $scope.lecturers.splice(index, 1);
     }
 
-    $scope.deleteLecture = function(index) {
+    $scope.deleteLecture = function (index) {
         $scope.course.lecturers.splice(index, 1);
     }
 
-    $scope.back = function() {
+    $scope.back = function () {
         $location.path('/courses/');
     }
 
-    $scope.saveLecturers = function() {
+    $scope.saveLecturers = function () {
         CoursesService.update($scope.course);
         $location.path('/courses/');
     }
 }]);
 kujonControllers.controller('LectionCtrl', ['$scope', '$routeParams', '$location', 'LectionsService', function ($scope, $routeParams, $location, LectionsService) {
 
-    $scope.lections = LectionsService.query();
-
-    $scope.newLection = function() {
+    $scope.newLection = function () {
         $location.path('/lection-presence/');
     }
 
+    $scope.lections = LectionsService.query();
+
 }]);
-kujonControllers.controller('LectionPesenceCtrl', ['$scope', '$routeParams', '$location', 'LectionsService', 'CoursesService', 'GroupsService', function ($scope, $routeParams, $location, LectionsService, CoursesService, GroupsService) {
+kujonControllers.controller('LectionPesenceCtrl', ['$scope', '$routeParams', '$location', 'LectionsService', 'CoursesService', 'GroupsService', 'PresencesService', function ($scope, $routeParams, $location, LectionsService, CoursesService, GroupsService, PresencesService) {
 
     $scope.groups = GroupsService.query();
     $scope.courses = CoursesService.query();
 
-    $scope.seeWhatIsChoose = function() {
+    $scope.presences = [];
+
+    $scope.$watch('lection.group', function (newVal, oldVal) {
+
+        if (angular.isUndefined(newVal) || newVal == null) return;
+        angular.forEach(newVal.students, function (student) {
+            $scope.presences.push({student: student});
+        });
+        console.log($scope.presences);
+    });
+
+
+    $scope.seeWhatIsChoose = function () {
         console.log($scope.lection);
-    }
+    };
+
+    $scope.saveLection = function () {
+        LectionsService.save($scope.lection, function (lection) {
+            $scope.lection.lectionID = lection.lectionID;
+            console.log($scope.lection);
+            angular.forEach($scope.presences, function (presence) {
+                presence.lection = $scope.lection;
+                console.log(presence);
+                PresencesService.save(presence);
+            });
+            $scope.lections = LectionsService.query();
+        });
+
+        $location.path('/lections/');
+    };
 
 }]);
-
 

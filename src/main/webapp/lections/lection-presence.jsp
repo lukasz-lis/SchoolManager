@@ -24,7 +24,8 @@
         <div class="col-md-4">
             <div class="form-group ">
                 <label class="control-label" for="group"><fmt:message key="lection.form.label.groupe"/></label>
-                <select ng-model="lection.group" id="group" class="form-control" ng-options="group as group.name for group in groups">
+                <select ng-model="lection.group" id="group" class="form-control"
+                        ng-options="group as group.name for group in groups">
                 </select>
             </div>
         </div>
@@ -41,8 +42,6 @@
     </div>
 </form>
 
-<a ng-click="seeWhatIsChoose()" class="butonik btn btn-primary"><span
-        class="glyphicon glyphicon-plus"></span> <fmt:message key="lection.add.button.label"/></a>
 
 <table class="table table-striped tablesorter">
     <thead>
@@ -50,16 +49,38 @@
         <th scope="col"><fmt:message key="user.col.list.label.firstName"/></th>
         <th scope="col"><fmt:message key="user.col.list.label.secName"/></th>
         <th scope="col"><fmt:message key="lection.col.list.label.presence"/></th>
+        <th scope="col"><fmt:message key="lection.col.list.label.absent"/></th>
+        <th scope="col"><fmt:message key="lection.col.list.label.late"/></th>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="gstudent in lection.group.students">
-        <td>{{gstudent.firstName}}</td>
-        <td>{{gstudent.secName}}</td>
+    <tr ng-repeat="presence in  presences">
+        <td>{{presence.student.firstName}}</td>
+        <td>{{presence.student.secName}}</td>
         <td>
-            <a ng-click="deleteStudent($index)" class="btn btn-primary btn-xs"><span
-                    class="glyphicon glyphicon-trash"></span></a>
+            <div class="radio">
+                <label>
+                    <input type="radio" ng-model="presence.presened" name="{{$index}}"  value="o" checked>
+                </label>
+            </div>
+        </td>
+        <td>
+            <div class="radio">
+                <label>
+                    <input type="radio" ng-model="presence.presened" name="{{$index}}"  value="n" >
+                </label>
+            </div>
+        </td>
+        <td>
+            <div class="radio">
+                <label>
+                    <input type="radio" ng-model="presence.presened" name="{{$index}}" value="s" >
+                </label>
+            </div>
         </td>
     </tr>
     </tbody>
 </table>
+
+<a ng-click="saveLection()" class="butonik btn btn-primary"><span
+        class="glyphicon glyphicon-plus"></span> <fmt:message key="label.save"/></a>

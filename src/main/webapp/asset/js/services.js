@@ -44,8 +44,24 @@ kujonServices.factory('LecturersService', ['$resource', function($resource) {
 kujonServices.factory('LectionsService', ['$resource', function($resource) {
         return $resource('api/lections/:id', {}, {
             query: {method: 'GET', isArray: true},
-            create: {method: 'POST'},
+            create: {method: 'POST', isArray: false},
             update: {method: 'PUT'},
-            get: {method: 'GET', isArray: false, params: {id: '@id'}}                           
+            get: {method: 'GET', isArray: false, params: {id: '@id'}}
         });
+}]);
+kujonServices.factory('PresencesService', ['$resource', function($resource) {
+    return $resource('api/presences/:id', {}, {
+        query: {method: 'GET', isArray: true},
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        get: {method: 'GET', isArray: false, params: {id: '@id'}}
+    });
+}]);
+kujonServices.factory('ProgressService', ['$resource', function($resource) {
+    return $resource('api/progress/:id', {}, {
+        query: {method: 'GET', isArray: true},
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        get: {method: 'GET', isArray: false, params: {id: '@id'}}
+    });
 }]);

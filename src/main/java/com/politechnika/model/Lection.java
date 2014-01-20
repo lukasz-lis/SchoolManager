@@ -8,6 +8,7 @@ import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 import org.mongodb.morphia.annotations.Reference;
+import org.mongodb.morphia.annotations.Version;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
@@ -15,8 +16,8 @@ import java.util.Date;
 /**
  * @author l.lis
  */
-@Entity
 @XmlRootElement
+@Entity
 public class Lection {
 
     @Id
@@ -30,6 +31,16 @@ public class Lection {
     private Course course;
     @Reference
     private User lecturer;
+    @Version
+    private Long v;
+
+    public Long getV() {
+        return v;
+    }
+
+    public void setV(Long v) {
+        this.v = v;
+    }
 
     public Date getCreateDate() {
         return createDate;

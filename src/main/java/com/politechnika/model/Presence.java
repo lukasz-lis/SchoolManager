@@ -8,9 +8,9 @@ import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 import org.mongodb.morphia.annotations.Reference;
+import org.mongodb.morphia.annotations.Version;
 
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.Date;
 
 /**
  * @author l.lis
@@ -26,7 +26,17 @@ public class Presence {
     private Lection lection;
     @Reference
     private Student student;
-    Boolean presened;
+    String presened;
+    @Version
+    private Long v;
+
+    public Long getV() {
+        return v;
+    }
+
+    public void setV(Long v) {
+        this.v = v;
+    }
 
     public String getPresenceID() {
         return presenceID;
@@ -34,6 +44,14 @@ public class Presence {
 
     public void setPresenceID(String presenceID) {
         this.presenceID = presenceID;
+    }
+
+    public Lection getLection() {
+        return lection;
+    }
+
+    public void setLection(Lection lection) {
+        this.lection = lection;
     }
 
     public Student getStudent() {
@@ -44,19 +62,21 @@ public class Presence {
         this.student = student;
     }
 
-    public Boolean getPresened() {
+    public String getPresened() {
         return presened;
     }
 
-    public void setPresened(Boolean presened) {
+    public void setPresened(String presened) {
         this.presened = presened;
     }
 
-    public Lection getLection() {
-        return lection;
-    }
-
-    public void setLection(Lection lection) {
-        this.lection = lection;
+    @Override
+    public String toString() {
+        return "Presence{" +
+                "presenceID='" + presenceID + '\'' +
+                ", lection=" + lection +
+                ", student=" + student +
+                ", presened='" + presened + '\'' +
+                '}';
     }
 }

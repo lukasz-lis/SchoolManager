@@ -37,8 +37,11 @@ public class LectionResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public void create(Lection lection) {
+    @Produces(MediaType.APPLICATION_JSON)
+    public Lection create(Lection lection) {
         lectionDAO.save(lection);
+        LOGGER.debug(lection);
+        return lection;
     }
 
     @PUT
