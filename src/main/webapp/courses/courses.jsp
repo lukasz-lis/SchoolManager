@@ -29,9 +29,9 @@
             <div class="modal-footer">
                 <a ng-click="close()" class="btn btn-default" data-dismiss="modal"><fmt:message
                         key="label.close"/></a>
-                <a ng-if="course.courseID != null" ng-click="updateGroup()" data-toggle="modal" class="btn btn-primary">
+                <a ng-if="course.courseID != null" ng-click="updateCourse()" data-toggle="modal" class="btn btn-primary">
                     <fmt:message key="label.save"/></a>
-                <a ng-if="course.courseID == null" ng-click="createGroup()" data-toggle="modal" class="btn btn-primary">
+                <a ng-if="course.courseID == null" ng-click="createCourse()" data-toggle="modal" class="btn btn-primary">
                     <fmt:message key="label.save"/></a>
             </div>
         </div>

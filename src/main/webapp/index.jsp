@@ -72,6 +72,7 @@
                     <li><a href="#/groups"><fmt:message key="navi.label.groups"/></a></li>
                     <li><a href="#/courses"><fmt:message key="navi.label.courses"/></a></li>
                     <li><a href="#/lections"><fmt:message key="navi.label.lections"/></a></li>
+                    <li><a href="#/progress"><fmt:message key="navi.label.progress"/></a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">

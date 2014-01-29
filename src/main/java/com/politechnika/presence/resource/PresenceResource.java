@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * @author l.lis
  */
-@Path("/progress/")
+@Path("/presences/")
 public class PresenceResource {
 
     private static final Logger LOGGER = Logger.getLogger(UserResource.class);

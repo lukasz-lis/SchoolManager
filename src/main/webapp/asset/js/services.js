@@ -58,10 +58,10 @@ kujonServices.factory('PresencesService', ['$resource', function($resource) {
     });
 }]);
 kujonServices.factory('ProgressService', ['$resource', function($resource) {
-    return $resource('api/progress/:id', {}, {
+    return $resource('api/progress/:student', {}, {
         query: {method: 'GET', isArray: true},
         create: {method: 'POST'},
         update: {method: 'PUT'},
-        get: {method: 'GET', isArray: false, params: {id: '@id'}}
+        get: {method: 'GET', isArray: true, params: {student: '@student'}}
     });
 }]);

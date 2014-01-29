@@ -16,40 +16,22 @@ public class Progress {
 
     @Id
     private String progressID = new ObjectId().toString();
-    private String description;
-    private String title;
     private String progress;
+    private String note;
     @Reference
-    private Course subject;
+    private Course course;
     @Reference
     private Student student;
     @Reference
     private User createdBy;
 
-    public String getTitle() {
-        return title;
+    public String getNote() {
+        return note;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setNote(String note) {
+        this.note = note;
     }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public User getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(User createdBy) {
-        this.createdBy = createdBy;
-    }
-
     public String getProgressID() {
         return progressID;
     }
@@ -66,12 +48,12 @@ public class Progress {
         this.progress = progress;
     }
 
-    public Course getSubject() {
-        return subject;
+    public Course getCourse() {
+        return course;
     }
 
-    public void setSubject(Course subject) {
-        this.subject = subject;
+    public void setCourse(Course course) {
+        this.course = course;
     }
 
     public Student getStudent() {
@@ -81,4 +63,13 @@ public class Progress {
     public void setStudent(Student student) {
         this.student = student;
     }
+
+    public User getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(User createdBy) {
+        this.createdBy = createdBy;
+    }
+
 }
