@@ -8,6 +8,7 @@ import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
+import org.apache.shiro.SecurityUtils;
 
 /**
  * @author l.lis
@@ -22,6 +23,7 @@ public class GroupResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Group> getAll() {
+        LOGGER.debug(SecurityUtils.getSubject().getPrincipal().toString());
         return groupDAO.find().asList();
     }
 

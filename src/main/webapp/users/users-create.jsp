@@ -49,13 +49,13 @@
             <div class="col-md-6">
                 <label class="control-label" for="password"><fmt:message
                         key="user.add.form.label.password"/></label>
-                <input type="text" class="form-control" id="password" ng-model="user.password" name="password"
+                <input type="password" class="form-control" id="password" ng-model="user.password" name="password"
                        placeholder='<fmt:message key="user.add.form.label.password"/>'>
             </div>
             <div class="col-md-6">
                 <label class="control-label" for="repeatPassword"><fmt:message
                         key="user.add.form.label.password.repeat"/></label>
-                <input type="text" class="form-control" id="repeatPassword"
+                <input type="password" class="form-control" id="repeatPassword"
                        placeholder='<fmt:message key="user.add.form.label.password.repeat"/>'>
             </div>
         </div>

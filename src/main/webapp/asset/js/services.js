@@ -65,3 +65,8 @@ kujonServices.factory('ProgressService', ['$resource', function($resource) {
         get: {method: 'GET', isArray: true, params: {student: '@student'}}
     });
 }]);
+kujonServices.factory('SecurityService', ['$resource', function($resource) {
+    return $resource('api/security', {}, {
+        get: {method: 'GET', isArray: false}
+    });
+}]);

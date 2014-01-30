@@ -30,7 +30,7 @@ public class Lection {
     @Reference
     private Course course;
     @Reference
-    private User lecturer;
+    private User createdBy;
     @Version
     private Long v;
 
@@ -74,14 +74,6 @@ public class Lection {
         this.course = course;
     }
 
-    public User getLecturer() {
-        return lecturer;
-    }
-
-    public void setLecturer(User lecturer) {
-        this.lecturer = lecturer;
-    }
-
     public String getTitle() {
         return subject;
     }
@@ -105,5 +97,14 @@ public class Lection {
     public void setGroup(Group group) {
         this.group = group;
     }
+
+    public User getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(User createdBy) {
+        this.createdBy = createdBy;
+    }
+    
 
 }
