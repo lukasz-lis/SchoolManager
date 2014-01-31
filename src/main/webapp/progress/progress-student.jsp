@@ -13,10 +13,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="prog in progress">
-            <td>{{prog.course.name}}</td>
-            <td>{{prog.progress}}</td>
-              
+        <tr ng-repeat="progresPerCourse in coursesToFilter() | filter:filterCourses">
+            <td>{{progresPerCourse.course.name}}</td>
+            <td>
+                <a  class="btn btn-success" data-toggle="tooltip" ng-repeat="prog in progress | filter:{course: progresPerCourse.course}" title="{{prog.note}}">{{prog.progress}}</a>
+            </td>
         </tr>
     </tbody>
 </table>

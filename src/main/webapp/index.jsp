@@ -1,3 +1,4 @@
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <fmt:setBundle basename="message"/>
 
@@ -65,10 +66,11 @@
                     </div>
                     <div class="navbar-collapse collapse dropdown">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#"><fmt:message key="navi.label.desktop"/></a></li>
-                            <li><a href="#about"><fmt:message key="navi.label.reports"/></a></li>
-                            <li><a href="#contact"><fmt:message key="navi.label.stats"/></a></li>
+                            <li class="active"><a href=""><fmt:message key="navi.label.desktop"/></a></li>         
+                            
+                            
                             <li><a href="#/progress/student"><fmt:message key="navi.label.progress"/></a></li>
+                           
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="navi.label.configuration"/><b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -77,6 +79,7 @@
                                     <li><a href="#/courses"><fmt:message key="navi.label.courses"/></a></li>
                                 </ul>
                             </li>
+                            
                             <li class="dropdown">
                                 <a  class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="navi.label.students"/><b class="caret"></b></a>
                                 <ul class="dropdown-menu">

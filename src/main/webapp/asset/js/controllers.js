@@ -71,7 +71,6 @@ kujonControllers.controller('StudentCreationCtrl', ['$scope', '$routeParams', '$
         $scope.user.role = 'STUDENT';
 
         $scope.createUser = function() {
-            console.log($scope.user);
             StudentsService.create($scope.user, function() {
                 $scope.users = UsersService.query();
                 $location.path('/users');
@@ -329,17 +328,31 @@ kujonControllers.controller('ProgressCtrl', ['$scope', '$routeParams', '$locatio
 
     }]);
 kujonControllers.controller('ProgressStudentCtrl', ['$scope', '$routeParams', '$location', 'SecurityService', 'ProgressService', function($scope, $routeParams, $location, SecurityService, ProgressService) {
-       
-        SecurityService.get(function(value){
-            $scope.user = value;
+
+        $scope.user = SecurityService.get(function(data) {
+            $scope.progress = ProgressService.get({student: data.userID});
         });
-        console.log($scope.user);
-         $scope.progress = ProgressService.get({student: $scope.user.userID});
-        
+
+        var indexedCourses = [];
+
+        $scope.coursesToFilter = function() {
+            indexedCourses = [];
+            return $scope.progress;
+        }
+
+        $scope.filterCourses = function(course) {
+            var courseIsNew = indexedCourses.indexOf(course.courseID) == -1;
+            if (courseIsNew) {
+                indexedCourses.push(course.courseID);
+            }
+            return courseIsNew;
+        }
 
 
-      
-        console.log($scope.progress );
+
+
+
+
 
 
     }]);
