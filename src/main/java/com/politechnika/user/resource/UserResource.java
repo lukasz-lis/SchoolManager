@@ -78,6 +78,14 @@ public class UserResource {
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public User findByUsername(@PathParam("id") String id) {
+        LOGGER.debug( userDAO.findOne("userID", id));
         return userDAO.findOne("userID", id);
+    }
+
+    @GET
+    @Path("password")
+    @Produces(MediaType.APPLICATION_JSON)
+    public void saveNewPassword(User user) {
+        create(user);
     }
 }

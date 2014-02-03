@@ -12,7 +12,10 @@ import org.apache.log4j.Logger;
 import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.crypto.hash.Sha256Hash;
 
 /**
  *
@@ -30,6 +33,17 @@ public class SercurityResource {
     public User get() {
         String username = SecurityUtils.getSubject().getPrincipal().toString();
         return userDAO.findOne("username", username);
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response checkUserPassword(User user) {
+        User tempUser = userDAO.findOne("userID", user.getUserID());
+        String tempHashPassword = new Sha256Hash(user.getPassword(), tempUser.getSalt(), 100000).toBase64();
+        if(tempHashPassword.equals(tempUser.getPassword())) {
+            return Response.status(200).build();
+        }
+        return  Response.status(401).build();
     }
 
 }

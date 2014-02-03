@@ -70,3 +70,13 @@ kujonServices.factory('SecurityService', ['$resource', function($resource) {
         get: {method: 'GET', isArray: false}
     });
 }]);
+kujonServices.factory('UsersPasswordService', ['$resource', function($resource) {
+    return $resource('api/users/password', {}, {
+        change: {method: 'POST'}
+    });
+}]);
+kujonServices.factory('StudentsPasswordService', ['$resource', function($resource) {
+    return $resource('api/students/password', {}, {
+        change: {method: 'POST'}
+    });
+}]);

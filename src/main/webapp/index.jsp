@@ -93,7 +93,7 @@
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" ><span class="glyphicon glyphicon-user"/></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#/users"><fmt:message key="navi.label.profil"/></a></li>
+                                    <li><a href="#/user/profile"><fmt:message key="navi.label.profil"/></a></li>
                                     <li><a href="#/courses"><fmt:message key="navi.label.password"/></a></li>
                                     <li><a href="logout"><fmt:message key="navi.label.logout"/></a></li>
                                 </ul>
