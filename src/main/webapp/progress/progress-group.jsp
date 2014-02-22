@@ -102,7 +102,7 @@
             <td>{{stud.student.firstName}}</td>
             <td>{{stud.student.secName}}</td>
             <td>
-                <a  class="btn btn-success" data-toggle="tooltip" ng-repeat="prog in stud.progress" title="{{prog.note}}">{{prog.progress}}</a>
+                <a  class="btn btn-success btn-xs" data-toggle="tooltip" ng-repeat="prog in stud.progress" title="{{prog.note}}">{{prog.progress}}</a>
             </td>
             <td>
                 <a ng-click="addProgress(stud.student)" data-toggle="modal" data-target="#progress-form-modal" class="butonik btn btn-primary btn-xs"><span

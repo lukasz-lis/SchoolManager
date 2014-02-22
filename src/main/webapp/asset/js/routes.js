@@ -49,6 +49,9 @@ kujon.config(['$routeProvider',
             }).when('/user/password', {
                 templateUrl: 'users/user-password.jsp',
                 controller: 'ChangePasswordCtrl'
+            }).when('/presence/student', {
+                templateUrl: 'lections/presence-lection.jsp',
+                controller: 'PresenceLectionCtrl'
             }).otherwise({
                 redirectTo: '/'
             });

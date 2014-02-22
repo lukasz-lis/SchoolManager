@@ -374,30 +374,38 @@ kujonControllers.controller('EditProfileCtrl', ['$scope', '$routeParams', '$loca
     }
 
 }]);
-kujonControllers.controller('ChangePasswordCtrl', ['$scope', '$routeParams', '$location', 'SecurityService', 'UsersPasswordService', 'StudentsPasswordService', function ($scope, $routeParams, $location, SecurityService,  UsersPasswordService, StudentsPasswordService) {
+kujonControllers.controller('ChangePasswordCtrl', ['$scope', '$routeParams', '$location', 'SecurityService', 'PasswordService', function ($scope, $routeParams, $location, SecurityService, PasswordService) {
+
+    $scope.user = SecurityService.get();
+
+
+
+    $scope.updateUser = function() {
+        $scope.user.password = $scope.password.newPassword;
+        PasswordService.change($scope.user);
+        $location.path('/');
+    }
+}]);
+kujonControllers.controller('PresenceLectionCtrl', ['$scope', '$routeParams', '$location',  'SecurityService', 'PresencesStudentService', function ($scope, $routeParams, $location, SecurityService, PresencesStudentService) {
 
     SecurityService.get(function(user) {
-        console.log("Sprawdzam role"+user);
-        if(user.role == "STUDENT") {
-            goToStudentEditPage(user);
-        } else {
-            goToUserEditPage(user);
-        }
+        $scope.presences = PresencesStudentService.get({username : user.username});
+        console.log($scope.presences);
     });
 
+    var indexedCourses = [];
 
-
-    function goToStudentEditPage(user) {
-        console.log(user.userID);
-        var id = user.userID;
-        $location.path('/students-details/' + id);
+    $scope.coursesToFilter = function () {
+        indexedCourses = [];
+        return $scope.presences;
     }
 
-    function goToUserEditPage(user) {
-        console.log(user.userID);
-        var id = user.userID;
-        $location.path('/users-details/' + id);
+    $scope.filterCourses = function (course) {
+        var courseIsNew = indexedCourses.indexOf(course.courseID) == -1;
+        if (courseIsNew) {
+            indexedCourses.push(course.courseID);
+        }
+        return courseIsNew;
     }
 
 }]);
-

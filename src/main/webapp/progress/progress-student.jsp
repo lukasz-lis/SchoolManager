@@ -8,8 +8,8 @@
 <table class="table table-striped tablesorter">
     <thead>
         <tr>
-            <th scope="col"><fmt:message key="user.col.list.label.firstName"/></th>
-            <th scope="col"><fmt:message key="user.col.list.label.secName"/></th>
+            <th scope="col"><fmt:message key="progress.col.list.label.course"/></th>
+            <th scope="col"><fmt:message key="progress.col.list.label.progres"/></th>
         </tr>
     </thead>
     <tbody>

@@ -49,6 +49,11 @@ kujonServices.factory('LectionsService', ['$resource', function($resource) {
             get: {method: 'GET', isArray: false, params: {id: '@id'}}
         });
 }]);
+kujonServices.factory('PresencesStudentService', ['$resource', function($resource) {
+    return $resource('api/presences/student/:username', {}, {
+        get: {method: 'GET', isArray: true, params: {username: '@username'}}
+    });
+}]);
 kujonServices.factory('PresencesService', ['$resource', function($resource) {
     return $resource('api/presences/:id', {}, {
         query: {method: 'GET', isArray: true},
@@ -70,13 +75,9 @@ kujonServices.factory('SecurityService', ['$resource', function($resource) {
         get: {method: 'GET', isArray: false}
     });
 }]);
-kujonServices.factory('UsersPasswordService', ['$resource', function($resource) {
-    return $resource('api/users/password', {}, {
-        change: {method: 'POST'}
-    });
-}]);
-kujonServices.factory('StudentsPasswordService', ['$resource', function($resource) {
-    return $resource('api/students/password', {}, {
+
+kujonServices.factory('PasswordService', ['$resource', function($resource) {
+    return $resource('api/password', {}, {
         change: {method: 'POST'}
     });
 }]);

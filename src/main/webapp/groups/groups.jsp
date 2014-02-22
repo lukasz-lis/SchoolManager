@@ -13,9 +13,9 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 ng-if="group.groupID != null"  class="modal-title" id="group-form-modal-label"><fmt:message
-                        key="group.add.form.modal.label"/></h4>
                 <h4 ng-if="group.groupID == null"  class="modal-title" id="group-form-modal-label"><fmt:message
+                        key="group.add.form.modal.label"/></h4>
+                <h4 ng-if="group.groupID != null"  class="modal-title" id="group-form-modal-label"><fmt:message
                         key="group.edit.form.modal.label"/></h4>
             </div>
             <div class="modal-body">

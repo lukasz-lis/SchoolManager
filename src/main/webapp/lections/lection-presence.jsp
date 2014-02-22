@@ -84,3 +84,5 @@
 
 <a ng-click="saveLection()" class="butonik btn btn-primary"><span
         class="glyphicon glyphicon-plus"></span> <fmt:message key="label.save"/></a>
+<a href="#/lections" class="btn btn-default"><fmt:message
+        key="label.close"/></a>
